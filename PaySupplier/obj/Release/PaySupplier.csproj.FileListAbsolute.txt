@@ -1,0 +1,54 @@
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\PaySupplier 1.0.0.0.exe.config
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\PaySupplier 1.0.0.0.exe
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\PaySupplier 1.0.0.0.pdb
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\Dapper.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\Google.Protobuf.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\K4os.Compression.LZ4.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\K4os.Compression.LZ4.Streams.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\K4os.Hash.xxHash.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\MySql.Data.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\System.Buffers.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\System.Configuration.ConfigurationManager.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\System.Diagnostics.DiagnosticSource.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\System.IO.Pipelines.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\System.Memory.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\System.Numerics.Vectors.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\ZstdSharp.dll
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\BouncyCastle.Crypto.xml
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\Dapper.xml
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\Google.Protobuf.pdb
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\Google.Protobuf.xml
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\K4os.Compression.LZ4.xml
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\K4os.Compression.LZ4.Streams.xml
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\K4os.Hash.xxHash.xml
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\MySql.Data.xml
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\System.Buffers.xml
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\System.Diagnostics.DiagnosticSource.xml
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\System.IO.Pipelines.xml
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\System.Memory.xml
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\System.Numerics.Vectors.xml
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier.csproj.AssemblyReference.cache
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier.csproj.SuggestedBindingRedirects.cache
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier.Controllers.Modals.ModalCreateProfile.resources
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier.Form1.resources
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier.Properties.Resources.resources
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier.Views.Modals.ModalViewService.resources
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier.Views.ViewLogin.resources
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier.Views.ViewServices.resources
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier.Views.VProfile.resources
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier.csproj.GenerateResource.cache
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier.csproj.CoreCompileInputs.cache
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier.csproj.CopyComplete
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier 1.0.0.0.exe
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier 1.0.0.0.pdb
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\PaySupplier 1.0.0.0.exe.manifest
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\PaySupplier 1.0.0.0.application
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier 1.0.0.0.exe.manifest
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier 1.0.0.0.application

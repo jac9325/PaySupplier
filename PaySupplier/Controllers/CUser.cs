@@ -31,7 +31,7 @@ namespace PaySupplier.Controllers
                     return currentUser;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Manejo de errores
 

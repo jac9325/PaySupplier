@@ -17,7 +17,7 @@ namespace PaySupplier
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ViewLogin());
+            Application.Run(new ViewServices());
         }
     }
 }

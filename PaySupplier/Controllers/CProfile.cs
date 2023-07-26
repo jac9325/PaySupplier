@@ -26,7 +26,7 @@ namespace PaySupplier.Controllers
                     return rowsAffected > 0;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Manejo de errores 
                 return false;
@@ -44,7 +44,7 @@ namespace PaySupplier.Controllers
                     return rowsAffected > 0;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Manejo de errores 
                 return false;
@@ -65,7 +65,7 @@ namespace PaySupplier.Controllers
                     return profiles;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Manejo de errores
                 

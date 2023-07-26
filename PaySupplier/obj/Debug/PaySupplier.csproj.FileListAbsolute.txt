@@ -1,6 +1,3 @@
-C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Debug\PaySupplier.exe.config
-C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Debug\PaySupplier.exe
-C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Debug\PaySupplier.pdb
 C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Debug\Dapper.dll
 C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Debug\Google.Protobuf.dll
@@ -41,8 +38,17 @@ C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.Proper
 C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.csproj.GenerateResource.cache
 C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.csproj.CoreCompileInputs.cache
 C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.csproj.CopyComplete
-C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.exe
-C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.pdb
 C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.Views.VProfile.resources
 C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.Controllers.Modals.ModalCreateProfile.resources
 C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.Views.ViewLogin.resources
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.Views.ViewServices.resources
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.Views.Modals.ModalViewService.resources
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Debug\PaySupplier 1.0.0.0.exe.config
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Debug\PaySupplier 1.0.0.0.exe.manifest
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Debug\PaySupplier 1.0.0.0.application
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Debug\PaySupplier 1.0.0.0.exe
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Debug\PaySupplier 1.0.0.0.pdb
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier 1.0.0.0.exe.manifest
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier 1.0.0.0.application
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier 1.0.0.0.exe
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier 1.0.0.0.pdb
