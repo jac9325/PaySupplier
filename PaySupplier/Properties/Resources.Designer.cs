@@ -63,6 +63,36 @@ namespace PaySupplier.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _189689 {
+            get {
+                object obj = ResourceManager.GetObject("189689", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5610944 {
+            get {
+                object obj = ResourceManager.GetObject("5610944", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_trash_4341321_120557 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder-trash-4341321_120557", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_Blanco {
             get {
                 object obj = ResourceManager.GetObject("Logo-Blanco", resourceCulture);

@@ -11,7 +11,7 @@ namespace PaySupplier.Controllers
 {
     public class CHotelServices
     {
-        public static bool createHotel(HotelService currentHotelService)
+        public static bool createHotelService(HotelService currentHotelService)
         {
             string connectionString = connection.GetConnectionString();
             try
@@ -20,10 +20,8 @@ namespace PaySupplier.Controllers
                 {
                     connection.Open();
                     //   
-                    var sql = "INSERT INTO hotelServices (idHotels, idService, dateCreated, dateUpdate, sConfidencial, sBooking,sPublicada," +
-                        "mConfidencial, mBooking, mPublicada, tConfidencial, tBooking, tPublicada) " +
-                        "VALUES (@idHotels, @idService, @dateCreated, @dateUpdate, @sConfidencial, @sBooking, @sPublicada," +
-                        "@mConfidencial, @mBooking, @mPublicada, @tConfidencial, @tBooking, @tPublicada)";
+                    var sql = "INSERT INTO hotelServices (idHotels, idService, dateCreated, dateUpdate, priceConfidencial, priceBooking, pricePublic)" +
+                        "VALUES (@idHotels, @idService, @dateCreated, @dateUpdate, @priceConfidencial, @priceBooking, @pricePublic)";
                     // Use the Query method to execute the query and return a list of objects    
                     int rowsAffected = connection.Execute(sql, currentHotelService);
                     return rowsAffected > 0;

@@ -139,14 +139,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PaySupplier 1.0.0.0.exe" size="568800">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PaySupplier 1.0.0.0.exe" size="654304">
       <assemblyIdentity name="PaySupplier 1.0.0.0" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nFCfLP9t12mcsFmVzlLs16Bpsk5FwkCxxL0BzokK1Ws=</dsig:DigestValue>
+        <dsig:DigestValue>cvBEQ7Gmfd1olE0sUdRZ8Zy0Gq7mpVFpQRhpvraPazM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -59,5 +59,28 @@ namespace PaySupplier.Controllers
                 return services;
             }
         }
+        public static List<Service> getServicesLike(string searchText)
+        {
+            List<Service> services = new List<Service>();
+            string connectionString = connection.GetConnectionString();
+            try
+            {
+                using (var connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+                    //   
+                    var sql = "SELECT * FROM services WHERE statusService = 1 AND nameService LIKE @searchText";
+
+                    services = connection.Query<Service>(sql, new { searchText = "%" + searchText + "%" }).ToList();
+                    return services;
+                }
+            }
+            catch (Exception)
+            {
+                // Manejo de errores
+                return services;
+            }
+        }
+
     }
 }
