@@ -20,14 +20,14 @@ namespace PaySupplier.Controllers
                 {
                     connection.Open();
                     //   
-                    var sql = "INSERT INTO hotelServices (idHotels, idService, dateCreated, dateUpdate, priceConfidencial, priceBooking, pricePublic)" +
+                    var sql = "INSERT INTO hotelservices (idHotels, idService, dateCreated, dateUpdate, priceConfidencial, priceBooking, pricePublic)" +
                         "VALUES (@idHotels, @idService, @dateCreated, @dateUpdate, @priceConfidencial, @priceBooking, @pricePublic)";
                     // Use the Query method to execute the query and return a list of objects    
                     int rowsAffected = connection.Execute(sql, currentHotelService);
                     return rowsAffected > 0;
                 }
             }
-            catch (Exception)
+           catch (Exception)
             {
                 // Manejo de errores
                 return false;
@@ -42,11 +42,9 @@ namespace PaySupplier.Controllers
                 {
                     connection.Open();
                     //   
-                    var sql = "UPDATE hotels SET nameHotel = @nameHotel," +
-                        " phoneNumber = @phoneNumber, mobileNumber = @mobileNumber," +
-                        " email = @email, address = @address, statusHotel= @statusHotel," +
-                        "idCity = @idCity, descriptionHotel = @descriptionHotel " +
-                        "WHERE idHotels = @idHotels;";
+                    var sql = "UPDATE hotelservices SET dateUpdate = @dateUpdate," +
+                        " priceConfidencial = @priceConfidencial, pricePublic = @pricePublic," +
+                        " priceBooking = @priceBooking WHERE idHotelServices = @idHotelServices;";
                     // Use the Query method to execute the query and return a list of objects    
                     int rowsAffected = connection.Execute(sql, currentHotelService);
                     return rowsAffected > 0;
@@ -79,6 +77,28 @@ namespace PaySupplier.Controllers
                 // Manejo de errores
 
                 return hotels;
+            }
+        }
+        public static List<HotelService> getHotelServiceByIdHotel(int idHotel)
+        {
+            List<HotelService> hotelService = new List<HotelService>();
+            string connectionString = connection.GetConnectionString();
+            try
+            {
+                using (var connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+                    //   
+                    var query = "SELECT hs.*, s.nameService FROM hotelservices hs JOIN services s ON hs.idService = s.idService WHERE idHotels = @HotelId;";
+                    hotelService = connection.Query<HotelService>(query, new { HotelId = idHotel }).ToList();
+                    return hotelService;
+                }
+            }
+            catch (Exception)
+            {
+                // Manejo de errores
+
+                return hotelService;
             }
         }
     }

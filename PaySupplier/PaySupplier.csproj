@@ -243,11 +243,14 @@
     <None Include="packages.config" />
     <None Include="PaySupplier_TemporaryKey.pfx" />
     <None Include="Properties\DataSources\PaySupplier.Models.Agency.datasource" />
+    <None Include="Properties\DataSources\PaySupplier.Models.City.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.connection.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.Hotel.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.HotelService.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.HotelServiceAllData.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.HotelServiceWithName.datasource" />
+    <None Include="Properties\DataSources\PaySupplier.Models.HotelWithAllData.datasource" />
+    <None Include="Properties\DataSources\PaySupplier.Models.HotelWithServicesData.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.MProfile.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.MUser.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.Service.datasource" />

@@ -29,12 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNameHotel = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbCategoriesHotel = new System.Windows.Forms.ComboBox();
+            this.cbCities = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,13 +52,18 @@
             this.txtEmailHotel = new System.Windows.Forms.TextBox();
             this.txtDirectionHotel = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.pxEliminar = new System.Windows.Forms.PictureBox();
+            this.pxAgregar = new System.Windows.Forms.PictureBox();
+            this.dtpFechaCreación = new System.Windows.Forms.DateTimePicker();
             this.dgvHotelServices = new System.Windows.Forms.DataGridView();
             this.txtPPublicado = new System.Windows.Forms.TextBox();
+            this.lblDate = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPBooking = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtPConfidencial = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -62,9 +72,6 @@
             this.dgvServices = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.lblServicio = new System.Windows.Forms.Label();
-            this.pxEliminar = new System.Windows.Forms.PictureBox();
-            this.pxAgregar = new System.Windows.Forms.PictureBox();
-            this.btnSave = new System.Windows.Forms.Button();
             this.idServiceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameServiceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,18 +81,16 @@
             this.idServiceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameServiceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceConfidencialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pricePublicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceBookingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hotelServiceWithNameBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cbCities = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pxEliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHotelServices)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pxEliminar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pxAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServicesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelServiceWithNameBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -107,12 +112,14 @@
             this.txtNameHotel.Location = new System.Drawing.Point(10, 52);
             this.txtNameHotel.Multiline = true;
             this.txtNameHotel.Name = "txtNameHotel";
-            this.txtNameHotel.Size = new System.Drawing.Size(324, 38);
+            this.txtNameHotel.Size = new System.Drawing.Size(300, 38);
             this.txtNameHotel.TabIndex = 1;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbCategoriesHotel);
             this.groupBox1.Controls.Add(this.cbCities);
+            this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -129,10 +136,55 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox1.Location = new System.Drawing.Point(12, 88);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(340, 583);
+            this.groupBox1.Size = new System.Drawing.Size(320, 615);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hotel";
+            // 
+            // cbCategoriesHotel
+            // 
+            this.cbCategoriesHotel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategoriesHotel.FormattingEnabled = true;
+            this.cbCategoriesHotel.Items.AddRange(new object[] {
+            "Economico",
+            "Estandar",
+            "Superior",
+            "Premiun",
+            "Luxury"});
+            this.cbCategoriesHotel.Location = new System.Drawing.Point(10, 581);
+            this.cbCategoriesHotel.Name = "cbCategoriesHotel";
+            this.cbCategoriesHotel.Size = new System.Drawing.Size(300, 28);
+            this.cbCategoriesHotel.TabIndex = 7;
+            this.cbCategoriesHotel.Text = "Estandar";
+            // 
+            // cbCities
+            // 
+            this.cbCities.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCities.FormattingEnabled = true;
+            this.cbCities.Location = new System.Drawing.Point(10, 515);
+            this.cbCities.Name = "cbCities";
+            this.cbCities.Size = new System.Drawing.Size(300, 28);
+            this.cbCities.TabIndex = 7;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(7, 556);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(158, 18);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Categoría del Hotel:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(7, 491);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 18);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Ciudad:";
             // 
             // label7
             // 
@@ -200,7 +252,7 @@
             this.txtDescription.Location = new System.Drawing.Point(10, 400);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(324, 101);
+            this.txtDescription.Size = new System.Drawing.Size(300, 81);
             this.txtDescription.TabIndex = 6;
             // 
             // txtPhone
@@ -209,7 +261,7 @@
             this.txtPhone.Location = new System.Drawing.Point(10, 322);
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(324, 38);
+            this.txtPhone.Size = new System.Drawing.Size(300, 38);
             this.txtPhone.TabIndex = 5;
             // 
             // txtPhoneMobil
@@ -218,7 +270,7 @@
             this.txtPhoneMobil.Location = new System.Drawing.Point(10, 257);
             this.txtPhoneMobil.Multiline = true;
             this.txtPhoneMobil.Name = "txtPhoneMobil";
-            this.txtPhoneMobil.Size = new System.Drawing.Size(324, 38);
+            this.txtPhoneMobil.Size = new System.Drawing.Size(300, 38);
             this.txtPhoneMobil.TabIndex = 4;
             // 
             // txtEmailHotel
@@ -227,7 +279,7 @@
             this.txtEmailHotel.Location = new System.Drawing.Point(10, 188);
             this.txtEmailHotel.Multiline = true;
             this.txtEmailHotel.Name = "txtEmailHotel";
-            this.txtEmailHotel.Size = new System.Drawing.Size(324, 38);
+            this.txtEmailHotel.Size = new System.Drawing.Size(300, 38);
             this.txtEmailHotel.TabIndex = 3;
             // 
             // txtDirectionHotel
@@ -236,7 +288,7 @@
             this.txtDirectionHotel.Location = new System.Drawing.Point(10, 119);
             this.txtDirectionHotel.Multiline = true;
             this.txtDirectionHotel.Name = "txtDirectionHotel";
-            this.txtDirectionHotel.Size = new System.Drawing.Size(324, 38);
+            this.txtDirectionHotel.Size = new System.Drawing.Size(300, 38);
             this.txtDirectionHotel.TabIndex = 2;
             // 
             // groupBox2
@@ -244,29 +296,72 @@
             this.groupBox2.Controls.Add(this.btnSave);
             this.groupBox2.Controls.Add(this.pxEliminar);
             this.groupBox2.Controls.Add(this.pxAgregar);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.dtpFechaCreación);
             this.groupBox2.Controls.Add(this.dgvHotelServices);
             this.groupBox2.Controls.Add(this.txtPPublicado);
+            this.groupBox2.Controls.Add(this.lblDate);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.txtPBooking);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.txtPConfidencial);
+            this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.lblTotal);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Location = new System.Drawing.Point(358, 88);
+            this.groupBox2.Location = new System.Drawing.Point(338, 88);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(569, 583);
+            this.groupBox2.Size = new System.Drawing.Size(614, 615);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hotel Servicios";
             // 
-            // dateTimePicker1
+            // btnSave
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(18, 446);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(275, 22);
-            this.dateTimePicker1.TabIndex = 5;
+            this.btnSave.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(404, 474);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(204, 129);
+            this.btnSave.TabIndex = 10;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // pxEliminar
+            // 
+            this.pxEliminar.Image = global::PaySupplier.Properties.Resources.iconfinder_trash_4341321_120557;
+            this.pxEliminar.Location = new System.Drawing.Point(555, 98);
+            this.pxEliminar.Name = "pxEliminar";
+            this.pxEliminar.Size = new System.Drawing.Size(53, 49);
+            this.pxEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pxEliminar.TabIndex = 6;
+            this.pxEliminar.TabStop = false;
+            this.pxEliminar.Click += new System.EventHandler(this.pxEliminar_Click);
+            // 
+            // pxAgregar
+            // 
+            this.pxAgregar.Image = global::PaySupplier.Properties.Resources._189689;
+            this.pxAgregar.Location = new System.Drawing.Point(555, 31);
+            this.pxAgregar.Name = "pxAgregar";
+            this.pxAgregar.Size = new System.Drawing.Size(53, 49);
+            this.pxAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pxAgregar.TabIndex = 6;
+            this.pxAgregar.TabStop = false;
+            this.pxAgregar.Click += new System.EventHandler(this.pxAgregar_Click);
+            // 
+            // dtpFechaCreación
+            // 
+            this.dtpFechaCreación.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaCreación.Location = new System.Drawing.Point(18, 474);
+            this.dtpFechaCreación.Name = "dtpFechaCreación";
+            this.dtpFechaCreación.Size = new System.Drawing.Size(275, 27);
+            this.dtpFechaCreación.TabIndex = 5;
             // 
             // dgvHotelServices
             // 
@@ -275,39 +370,48 @@
             this.dgvHotelServices.AutoGenerateColumns = false;
             this.dgvHotelServices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHotelServices.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHotelServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHotelServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHotelServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHotelServices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idServiceDataGridViewTextBoxColumn,
             this.nameServiceDataGridViewTextBoxColumn,
             this.priceConfidencialDataGridViewTextBoxColumn,
-            this.pricePublicoDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
             this.priceBookingDataGridViewTextBoxColumn});
             this.dgvHotelServices.DataSource = this.hotelServiceWithNameBindingSource;
-            this.dgvHotelServices.Location = new System.Drawing.Point(18, 31);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Thistle;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHotelServices.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvHotelServices.Location = new System.Drawing.Point(6, 31);
             this.dgvHotelServices.Name = "dgvHotelServices";
             this.dgvHotelServices.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHotelServices.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHotelServices.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHotelServices.RowHeadersVisible = false;
             this.dgvHotelServices.RowHeadersWidth = 51;
             this.dgvHotelServices.RowTemplate.Height = 24;
             this.dgvHotelServices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHotelServices.Size = new System.Drawing.Size(476, 150);
+            this.dgvHotelServices.Size = new System.Drawing.Size(543, 150);
             this.dgvHotelServices.TabIndex = 4;
+            this.dgvHotelServices.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHotelServices_CellContentClick);
             // 
             // txtPPublicado
             // 
@@ -320,6 +424,16 @@
             this.txtPPublicado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPPublicado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPPublicado_KeyDown);
             this.txtPPublicado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPPublicado_KeyPress);
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(15, 450);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(132, 18);
+            this.lblDate.TabIndex = 3;
+            this.lblDate.Text = "Fecha Creación:";
             // 
             // label10
             // 
@@ -366,21 +480,31 @@
             this.txtPConfidencial.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPConfidencial_KeyDown);
             this.txtPConfidencial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPConfidencial_KeyPress);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(476, 188);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 18);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Items";
+            // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(424, 188);
+            this.lblTotal.Location = new System.Drawing.Point(453, 188);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(68, 18);
+            this.lblTotal.Size = new System.Drawing.Size(17, 18);
             this.lblTotal.TabIndex = 3;
-            this.lblTotal.Text = " 0 Items";
+            this.lblTotal.Text = "0";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(322, 189);
+            this.label11.Location = new System.Drawing.Point(333, 188);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(105, 18);
             this.label11.TabIndex = 3;
@@ -402,9 +526,9 @@
             this.groupBox3.Controls.Add(this.dgvServices);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.lblServicio);
-            this.groupBox3.Location = new System.Drawing.Point(933, 88);
+            this.groupBox3.Location = new System.Drawing.Point(958, 88);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(256, 583);
+            this.groupBox3.Size = new System.Drawing.Size(231, 615);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Servicios";
@@ -412,10 +536,10 @@
             // txtSearchService
             // 
             this.txtSearchService.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchService.Location = new System.Drawing.Point(6, 41);
+            this.txtSearchService.Location = new System.Drawing.Point(5, 31);
             this.txtSearchService.Multiline = true;
             this.txtSearchService.Name = "txtSearchService";
-            this.txtSearchService.Size = new System.Drawing.Size(240, 35);
+            this.txtSearchService.Size = new System.Drawing.Size(221, 35);
             this.txtSearchService.TabIndex = 4;
             this.txtSearchService.TextChanged += new System.EventHandler(this.txtSearchService_TextChanged);
             // 
@@ -425,14 +549,14 @@
             this.dgvServices.AllowUserToDeleteRows = false;
             this.dgvServices.AutoGenerateColumns = false;
             this.dgvServices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvServices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idServiceDataGridViewTextBoxColumn1,
@@ -441,13 +565,13 @@
             this.statusServiceDataGridViewTextBoxColumn,
             this.idTypeServiceDataGridViewTextBoxColumn});
             this.dgvServices.DataSource = this.ServicesBindingSource;
-            this.dgvServices.Location = new System.Drawing.Point(6, 82);
+            this.dgvServices.Location = new System.Drawing.Point(6, 72);
             this.dgvServices.Name = "dgvServices";
             this.dgvServices.ReadOnly = true;
             this.dgvServices.RowHeadersVisible = false;
             this.dgvServices.RowHeadersWidth = 51;
             this.dgvServices.RowTemplate.Height = 24;
-            this.dgvServices.Size = new System.Drawing.Size(240, 232);
+            this.dgvServices.Size = new System.Drawing.Size(221, 232);
             this.dgvServices.TabIndex = 0;
             this.dgvServices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServices_CellClick);
             // 
@@ -455,7 +579,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 323);
+            this.label12.Location = new System.Drawing.Point(2, 313);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(120, 18);
             this.label12.TabIndex = 3;
@@ -466,51 +590,11 @@
             this.lblServicio.AutoSize = true;
             this.lblServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblServicio.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblServicio.Location = new System.Drawing.Point(6, 341);
+            this.lblServicio.Location = new System.Drawing.Point(6, 331);
             this.lblServicio.Name = "lblServicio";
             this.lblServicio.Size = new System.Drawing.Size(214, 29);
             this.lblServicio.TabIndex = 3;
             this.lblServicio.Text = "No Seleccionado";
-            // 
-            // pxEliminar
-            // 
-            this.pxEliminar.Image = global::PaySupplier.Properties.Resources.iconfinder_trash_4341321_120557;
-            this.pxEliminar.Location = new System.Drawing.Point(500, 118);
-            this.pxEliminar.Name = "pxEliminar";
-            this.pxEliminar.Size = new System.Drawing.Size(63, 63);
-            this.pxEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pxEliminar.TabIndex = 6;
-            this.pxEliminar.TabStop = false;
-            this.pxEliminar.Click += new System.EventHandler(this.pxEliminar_Click);
-            // 
-            // pxAgregar
-            // 
-            this.pxAgregar.Image = global::PaySupplier.Properties.Resources._189689;
-            this.pxAgregar.Location = new System.Drawing.Point(500, 31);
-            this.pxAgregar.Name = "pxAgregar";
-            this.pxAgregar.Size = new System.Drawing.Size(63, 63);
-            this.pxAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pxAgregar.TabIndex = 6;
-            this.pxAgregar.TabStop = false;
-            this.pxAgregar.Click += new System.EventHandler(this.pxAgregar_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnSave.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(405, 367);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(158, 101);
-            this.btnSave.TabIndex = 10;
-            this.btnSave.Text = "Guardar";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // idServiceDataGridViewTextBoxColumn1
             // 
@@ -572,32 +656,36 @@
             // nameServiceDataGridViewTextBoxColumn
             // 
             this.nameServiceDataGridViewTextBoxColumn.DataPropertyName = "nameService";
-            this.nameServiceDataGridViewTextBoxColumn.HeaderText = "Service";
-            this.nameServiceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameServiceDataGridViewTextBoxColumn.FillWeight = 297.2097F;
+            this.nameServiceDataGridViewTextBoxColumn.HeaderText = "Servicio";
+            this.nameServiceDataGridViewTextBoxColumn.MinimumWidth = 120;
             this.nameServiceDataGridViewTextBoxColumn.Name = "nameServiceDataGridViewTextBoxColumn";
             this.nameServiceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // priceConfidencialDataGridViewTextBoxColumn
             // 
             this.priceConfidencialDataGridViewTextBoxColumn.DataPropertyName = "priceConfidencial";
-            this.priceConfidencialDataGridViewTextBoxColumn.HeaderText = "Confidencial";
-            this.priceConfidencialDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceConfidencialDataGridViewTextBoxColumn.FillWeight = 53.47594F;
+            this.priceConfidencialDataGridViewTextBoxColumn.HeaderText = "P. Confid.";
+            this.priceConfidencialDataGridViewTextBoxColumn.MinimumWidth = 90;
             this.priceConfidencialDataGridViewTextBoxColumn.Name = "priceConfidencialDataGridViewTextBoxColumn";
             this.priceConfidencialDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // pricePublicoDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.pricePublicoDataGridViewTextBoxColumn.DataPropertyName = "pricePublico";
-            this.pricePublicoDataGridViewTextBoxColumn.HeaderText = "Publico";
-            this.pricePublicoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pricePublicoDataGridViewTextBoxColumn.Name = "pricePublicoDataGridViewTextBoxColumn";
-            this.pricePublicoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "pricePublic";
+            this.dataGridViewTextBoxColumn1.FillWeight = 48.83658F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "P. Public";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 85;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // priceBookingDataGridViewTextBoxColumn
             // 
             this.priceBookingDataGridViewTextBoxColumn.DataPropertyName = "priceBooking";
-            this.priceBookingDataGridViewTextBoxColumn.HeaderText = "Booking";
-            this.priceBookingDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceBookingDataGridViewTextBoxColumn.FillWeight = 0.4777117F;
+            this.priceBookingDataGridViewTextBoxColumn.HeaderText = "P. Booking";
+            this.priceBookingDataGridViewTextBoxColumn.MinimumWidth = 95;
             this.priceBookingDataGridViewTextBoxColumn.Name = "priceBookingDataGridViewTextBoxColumn";
             this.priceBookingDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -605,46 +693,28 @@
             // 
             this.hotelServiceWithNameBindingSource.DataSource = typeof(PaySupplier.Models.HotelServiceWithName);
             // 
-            // cbCities
-            // 
-            this.cbCities.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCities.FormattingEnabled = true;
-            this.cbCities.Location = new System.Drawing.Point(10, 539);
-            this.cbCities.Name = "cbCities";
-            this.cbCities.Size = new System.Drawing.Size(324, 28);
-            this.cbCities.TabIndex = 7;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(7, 517);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 18);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Cities:";
-            // 
             // ModalViewHotelService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1210, 683);
+            this.ClientSize = new System.Drawing.Size(1210, 715);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "ModalViewHotelService";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.ModalViewHotelService_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pxEliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxAgregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHotelServices)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pxEliminar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pxAgregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServicesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelServiceWithNameBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -679,7 +749,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pxEliminar;
         private System.Windows.Forms.PictureBox pxAgregar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaCreación;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.BindingSource hotelServiceWithNameBindingSource;
@@ -694,13 +764,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusServiceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idTypeServiceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pricePublicDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idServiceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameServiceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceConfidencialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pricePublicoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceBookingDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ComboBox cbCities;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cbCategoriesHotel;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idServiceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameServiceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceConfidencialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceBookingDataGridViewTextBoxColumn;
     }
 }

@@ -52,3 +52,5 @@ C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\PaySupplier 1.0.
 C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\bin\Release\PaySupplier 1.0.0.0.application
 C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier 1.0.0.0.exe.manifest
 C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier 1.0.0.0.application
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier.Views.Modals.ModalViewHotelService.resources
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Release\PaySupplier.Views.ViewHotel.resources

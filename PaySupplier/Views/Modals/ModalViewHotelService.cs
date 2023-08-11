@@ -10,43 +10,44 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace PaySupplier.Views.Modals
 {
     public partial class ModalViewHotelService : Form
     {
-        public List<HotelServiceWithName> currentListHotelServiceWithName = new List<HotelServiceWithName>();
+        private List<HotelServiceWithName> currentListHotelServiceWithName = new List<HotelServiceWithName>();
+        private List<HotelService> currentListHotelService = new List<HotelService>();
         public HotelServiceWithName currentHotelServiceWithName = new HotelServiceWithName();
         public List<Service> currentListService = new List<Service>();
         private List<City> currentListCity = new List<City>();
         private Hotel currentHotel =  new Hotel();
         public Service currentService;
         string regexPattern = @"^[0-9]*(?:\.[0-9]*)?$";
+        private bool EsNuevo = false;
+        private int idHotel = 0;
         public ModalViewHotelService()
         {
             InitializeComponent();
-            int radio = 15;
-            Rectangle r = new Rectangle(0, 0, btnSave.Width, btnSave.Height);
-            btnSave.FlatAppearance.BorderSize = 0;
-            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
-            gp.AddArc(r.X, r.Y, radio, radio, 180, 90);
-            gp.AddArc(r.X + r.Width - radio, r.Y, radio, radio, 270, 90);
-            gp.AddArc(r.X + r.Width - radio, r.Y + r.Height - radio, radio, radio, 0, 90);
-            gp.AddArc(r.X, r.Y + r.Height - radio, radio, radio, 90, 90);
-            btnSave.Region = new Region(gp);
-
+            EsNuevo = true;
+        }
+        public ModalViewHotelService(int idHotel)
+        {
+            InitializeComponent();
+            this.EsNuevo = false;
+            this.idHotel = idHotel;
         }
 
         private void ModalViewHotelService_Load(object sender, EventArgs e)
         {
             ChargeListCity();
+            if (!EsNuevo)
+            {
+                ChargeData();
+            }
         }
-        public void changeFormTextBox()
-        {
-
-        }
-
         private void pxEliminar_Click(object sender, EventArgs e)
         {
             if (currentListHotelServiceWithName.Count <= 0)
@@ -63,12 +64,13 @@ namespace PaySupplier.Views.Modals
             currentListHotelServiceWithName.Remove(aux);
             hotelServiceWithNameBindingSource.DataSource = null;
             hotelServiceWithNameBindingSource.DataSource = currentListHotelServiceWithName;
-
             dgvHotelServices.Refresh();
+            setCountItems();
         }
-
         private void pxAgregar_Click(object sender, EventArgs e)
         {
+            //comprobar dato repetido           
+
             bool rpta = validateTextBoxService();
             if (rpta || currentService == null)
             {
@@ -82,16 +84,40 @@ namespace PaySupplier.Views.Modals
             auxHotelService.priceBooking = Convert.ToDecimal(txtPBooking.Text.Trim());
             auxHotelService.pricePublic = Convert.ToDecimal(txtPPublicado.Text.Trim());
             //-- add datos a la lista
+            //-- Comprobar datos repetidos
+            bool response = false;
+            response = currentListHotelServiceWithName.Any(h => h.idService == currentService.idService);
+            if (response == true)
+            {
+                DialogResult res = MessageBox.Show("El elemento ya esta agregado se va a Editar", "Pay Supplier", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if(res != DialogResult.OK)
+                {
+                    return;
+                }
+                currentHotelServiceWithName = currentListHotelServiceWithName.Find(x => x.idService == currentService.idService);
+                currentHotelServiceWithName.priceConfidencial = Convert.ToDecimal(txtPConfidencial.Text.Trim());
+                currentHotelServiceWithName.priceBooking = Convert.ToDecimal(txtPBooking.Text.Trim());
+                currentHotelServiceWithName.pricePublic = Convert.ToDecimal(txtPPublicado.Text.Trim());
+                ActualizarDatos();
+                clearFilds();
+                setCountItems();
+                return;
+            }
             currentListHotelServiceWithName.Add(auxHotelService);
             ActualizarDatos();
             clearFilds();
+            setCountItems();
+        }
+        public void setCountItems()
+        {
+            int countItems = currentListHotelServiceWithName.Count;
+            lblTotal.Text = countItems.ToString();
         }
         public bool validateTextBoxService()
         {
             bool rpta = false;
             if (txtPBooking.Text == string.Empty || txtPConfidencial.Text == string.Empty || txtPPublicado.Text == string.Empty) 
-            {
-                
+            {              
                 rpta = true;
             }
             return rpta;
@@ -243,11 +269,77 @@ namespace PaySupplier.Views.Modals
             txtPhoneMobil.Clear();
             txtDescription.Clear();
             currentListHotelServiceWithName.Clear();
-            
+            hotelServiceWithNameBindingSource.DataSource = null;
+            hotelServiceWithNameBindingSource.DataSource = currentListHotelServiceWithName;
+            dgvHotelServices.Refresh();
         }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
+                //Para editar datos 
+            if (!EsNuevo)
+            {
+                //-- Aqui todo para actualizar los datos
+                //primero se actualizan los datos del Hotel
+                //preparar Hotel
+                currentHotel.nameHotel = txtNameHotel.Text;
+                currentHotel.phoneNumber = txtPhone.Text;
+                currentHotel.mobileNumber = txtPhoneMobil.Text;
+                currentHotel.email = txtEmailHotel.Text;
+                currentHotel.address = txtDirectionHotel.Text;
+                currentHotel.descriptionHotel = txtDescription.Text;
+                currentHotel.idCity = (int)cbCities.SelectedValue;
+                currentHotel.categoryHotel = cbCategoriesHotel.Text.ToString();
+                //prepar servcios del hotel
+                foreach (var auxHotelServiceWithName in currentListHotelServiceWithName) //lista de hoteles en dgv
+                {
+                    int idServiceAux = auxHotelServiceWithName.idService;
+                    HotelService auxHService = new HotelService();
+                    auxHService = currentListHotelService.Find(x=>x.idService == idServiceAux);
+                    if (auxHService != null)
+                    {
+                        auxHService.dateUpdate = System.DateTime.Now;
+                        auxHService.pricePublic = auxHotelServiceWithName.pricePublic;
+                        auxHService.priceConfidencial = auxHotelServiceWithName.priceConfidencial;
+                        auxHService.priceBooking = auxHotelServiceWithName.priceBooking;
+                    }
+                    else
+                    {
+                        auxHService.dateCreated = System.DateTime.Now;
+                        auxHService.dateUpdate = System.DateTime.Now;
+                        auxHService.idService = auxHotelServiceWithName.idService;
+                        auxHService.nameService = auxHotelServiceWithName.nameService;
+                        auxHService.priceConfidencial = auxHotelServiceWithName.priceConfidencial;
+                        auxHService.pricePublic = auxHotelServiceWithName.pricePublic;
+                        auxHService.priceBooking  = auxHotelServiceWithName.priceBooking;
+                        auxHService.idHotelServices = 0;
+                        auxHService.idHotels = currentHotel.idHotels;
+                        currentListHotelService.Add(auxHService);
+                    }
+                }                
+                DialogResult Dl = MessageBox.Show("¿Estás segur@ de Actualizar?", "Pay Supplier", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (Dl == DialogResult.OK)
+                {
+
+                    bool resHotel = CHotel.updateAllHotelAndServices(currentHotel, currentListHotelService);
+                    if (resHotel) // se guardó correctamente el Hotel
+                    {
+                        MessageBox.Show("Se guardó correctamente", "Pay Supplier", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al actualizar", "Pay Supplier", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                else
+                {
+                    return;
+                }
+                
+                //--
+                return;
+            }
             bool respuesta = false;
             //validar campos
             if( !ValidateFieldsAll())
@@ -265,6 +357,7 @@ namespace PaySupplier.Views.Modals
             currentHotel.statusHotel = 1;
             currentHotel.descriptionHotel = txtDescription.Text;
             currentHotel.idCity = (int)cbCities.SelectedValue;
+            currentHotel.categoryHotel = cbCategoriesHotel.Text.ToString();
 
             //prepar servcios del hotel
             List<HotelService> listaServicios = currentListHotelServiceWithName.Select(hsn => new HotelService
@@ -279,10 +372,102 @@ namespace PaySupplier.Views.Modals
             }).ToList();
 
             //guardar Todo
-            respuesta = CHotel.createHotelWithServices(currentHotel, listaServicios);
-            MessageBox.Show(respuesta.ToString());
+            DialogResult saveAll = MessageBox.Show("¿Estás segur@ de guardar?", "Pay Supplier", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (saveAll == DialogResult.OK)
+            {
+                respuesta = CHotel.createHotelWithServices(currentHotel, listaServicios);
+                if (respuesta)
+                {
+                    MessageBox.Show("Se guardó correctamente", "Pay Supplier", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al Guardar", "Pay Supplier", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            else
+            {
+                return;
+            }        
             clearFieldsHotel();
+            setCountItems();
         }
-        
+
+        #region Editar Hotel
+        public void ChargeData()
+        {
+            GetHotel();
+            GetAllHotelServices();
+            SetDataFields();
+            setCountItems();
+        }
+        public void GetHotel()
+        {
+            currentHotel = CHotel.getHotel(idHotel.ToString());
+            if (currentHotel == null)
+            {
+                MessageBox.Show("Error al obtener el Hotel", "Pay Supplier", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+        public void GetAllHotelServices()
+        {
+            currentListHotelService = CHotelServices.getHotelServiceByIdHotel(idHotel);
+            if (currentListHotelService == null)
+            {
+                MessageBox.Show("Error al obtener los servicios", "Pay Supplier", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            currentListHotelServiceWithName = currentListHotelService
+            .Select(hs => new HotelServiceWithName
+            {
+                idService = hs.idService,
+                nameService = hs.nameService,
+                priceConfidencial = hs.priceConfidencial,
+                pricePublic = hs.pricePublic,
+                priceBooking = hs.priceBooking
+            })
+            .ToList();
+        }
+        public void SetDataFields()
+        {
+            // para el hotel
+            txtNameHotel.Text = currentHotel.nameHotel;
+            txtDirectionHotel.Text = currentHotel.address;
+            txtEmailHotel.Text = currentHotel.email;
+            txtPhoneMobil.Text = currentHotel.mobileNumber;
+            txtPhone.Text = currentHotel.phoneNumber;
+            txtDescription.Text = currentHotel.descriptionHotel;
+            cbCities.SelectedValue = currentHotel.idCity;
+            cbCategoriesHotel.Text = currentHotel.categoryHotel;
+
+            if (currentListHotelServiceWithName == null)
+            {
+                MessageBox.Show("La lista esta vacia", "Pay Supplier", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            hotelServiceWithNameBindingSource.DataSource = null;
+            hotelServiceWithNameBindingSource.DataSource = currentListHotelServiceWithName;
+            dgvHotelServices.Refresh();
+        }
+        #endregion
+
+        private void dgvHotelServices_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                int idServiceAux = Convert.ToInt32(dgvHotelServices.CurrentRow.Cells[0].Value);
+                currentHotelServiceWithName = currentListHotelServiceWithName.Find(x=>x.idService == idServiceAux);
+                txtPBooking.Text = currentHotelServiceWithName.priceBooking.ToString();
+                txtPConfidencial.Text = currentHotelServiceWithName.priceConfidencial.ToString();
+                txtPPublicado.Text = currentHotelServiceWithName.pricePublic.ToString();
+                //dar como actual servicio
+                currentService = new Service();
+                currentService.idService = currentHotelServiceWithName.idService;
+                currentService.nameService = currentHotelServiceWithName.nameService;
+                lblServicio.Text = currentService.nameService;              
+            }
+        }
     }
 }
