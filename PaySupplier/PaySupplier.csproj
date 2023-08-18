@@ -134,6 +134,7 @@
   <ItemGroup>
     <Compile Include="Controllers\CAgency.cs" />
     <Compile Include="Controllers\CCity.cs" />
+    <Compile Include="Controllers\CCurrency.cs" />
     <Compile Include="Controllers\CHotel.cs" />
     <Compile Include="Controllers\CHotelServices.cs" />
     <Compile Include="Controllers\CProfile.cs" />
@@ -152,13 +153,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AccountsPayables.cs" />
     <Compile Include="Models\Agency.cs" />
+    <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Models\connection.cs" />
+    <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\Hotel.cs" />
     <Compile Include="Models\HotelService.cs" />
     <Compile Include="Models\MProfile.cs" />
     <Compile Include="Models\MUser.cs" />
+    <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Service.cs" />
     <Compile Include="Models\TypeService.cs" />
     <Compile Include="Program.cs" />
@@ -169,6 +175,18 @@
     </Compile>
     <Compile Include="Views\DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModalBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ModalBooking.Designer.cs">
+      <DependentUpon>ModalBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModalCreateClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ModalCreateClient.Designer.cs">
+      <DependentUpon>ModalCreateClient.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Modals\ModalViewHotelService.cs">
       <SubType>Form</SubType>
@@ -181,6 +199,12 @@
     </Compile>
     <Compile Include="Views\Modals\ModalViewService.Designer.cs">
       <DependentUpon>ModalViewService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ViewBooking.Designer.cs">
+      <DependentUpon>ViewBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ViewHotel.cs">
       <SubType>Form</SubType>
@@ -222,11 +246,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ModalBooking.resx">
+      <DependentUpon>ModalBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ModalCreateClient.resx">
+      <DependentUpon>ModalCreateClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Modals\ModalViewHotelService.resx">
       <DependentUpon>ModalViewHotelService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Modals\ModalViewService.resx">
       <DependentUpon>ModalViewService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewBooking.resx">
+      <DependentUpon>ViewBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ViewHotel.resx">
       <DependentUpon>ViewHotel.cs</DependentUpon>
@@ -242,17 +278,24 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="PaySupplier_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\PaySupplier.Models.AccountsPayables.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.Agency.datasource" />
+    <None Include="Properties\DataSources\PaySupplier.Models.Booking.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.City.datasource" />
+    <None Include="Properties\DataSources\PaySupplier.Models.Client.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.connection.datasource" />
+    <None Include="Properties\DataSources\PaySupplier.Models.Currency.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.Hotel.datasource" />
+    <None Include="Properties\DataSources\PaySupplier.Models.HotelDGV.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.HotelService.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.HotelServiceAllData.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.HotelServiceWithName.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.HotelWithAllData.datasource" />
+    <None Include="Properties\DataSources\PaySupplier.Models.HotelWithServices.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.HotelWithServicesData.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.MProfile.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.MUser.datasource" />
+    <None Include="Properties\DataSources\PaySupplier.Models.Payment.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.Service.datasource" />
     <None Include="Properties\DataSources\PaySupplier.Models.TypeService.datasource" />
     <None Include="Properties\Settings.settings">
@@ -273,6 +316,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon-256x256.ico" />
+    <None Include="Resources\ico-cerrar.png" />
     <None Include="Resources\5610944.png" />
     <None Include="Resources\iconfinder-trash-4341321_120557.png" />
     <None Include="Resources\189689.png" />

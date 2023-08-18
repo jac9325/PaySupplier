@@ -36,8 +36,8 @@ namespace PaySupplier.Models
         public int idService { get; set; }
         public string nameService { get; set; }
         public int idHotelServices { get; set; }
-        public string priceConfidencial { get; set; }
-        public string priceBooking { get; set; }
-        public string pricePublic { get; set; }
+        public decimal priceConfidencial { get; set; }
+        public decimal priceBooking { get; set; }
+        public decimal pricePublic { get; set; }
     }
 }

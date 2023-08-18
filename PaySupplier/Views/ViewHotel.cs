@@ -17,8 +17,9 @@ namespace PaySupplier.Views
 {
     public partial class ViewHotel : Form
     {
-        List<HotelWithServicesData> currentListHotelsAllData = new List<HotelWithServicesData>();
+        
         List<Hotel> currentListHotel = new List<Hotel>();
+        List<HotelDGV> currentHotelDGV = new List<HotelDGV>();
         public ViewHotel()
         {
             InitializeComponent();
@@ -42,9 +43,9 @@ namespace PaySupplier.Views
         }
         public void GetHotelAllData()
         {
-            currentListHotel = CHotel.getHotelAllData();
+            currentHotelDGV = CHotel.getHotelAllData();
             HotelsBindingSource.DataSource = null;
-            HotelsBindingSource.DataSource = currentListHotel;
+            HotelsBindingSource.DataSource = currentHotelDGV;
             dgvHotels.Refresh();
         }
 

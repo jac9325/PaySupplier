@@ -121,13 +121,16 @@
   <data name="189689" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\189689.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="5610944" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5610944.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Logo-Blanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo-Blanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder-trash-4341321_120557" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder-trash-4341321_120557.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="5610944" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5610944.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ico-cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico-cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

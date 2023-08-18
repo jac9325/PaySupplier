@@ -54,3 +54,7 @@ C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier 1.0.0.
 C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier 1.0.0.0.pdb
 C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.Views.Modals.ModalViewHotelService.resources
 C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.Views.ViewHotel.resources
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.Views.DashBoard.resources
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.Views.ViewBooking.resources
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.Views.ModalBooking.resources
+C:\Users\jacs9\source\repos\PaySupplier\PaySupplier\obj\Debug\PaySupplier.Views.ModalCreateClient.resources

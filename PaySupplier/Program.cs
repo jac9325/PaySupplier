@@ -18,7 +18,7 @@ namespace PaySupplier
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ViewHotel());
+            Application.Run(new ViewLogin());
         }
     }
 }

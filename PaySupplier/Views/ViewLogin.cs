@@ -7,8 +7,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PaySupplier.Views
 {
@@ -35,8 +37,10 @@ namespace PaySupplier.Views
                     return;
                 }
 
-                currentUser = CUser.LoginUser(txtUser.Text.ToString().Trim(), txtPassword.Text.Trim().ToString());
-                MessageBox.Show(currentUser.user, "Pay Supplier", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                currentUser = CUser.LoginUser(txtUser.Text.ToString().Trim(), txtPassword.Text.Trim().ToString());                     
+                DashBoard viewMain = new DashBoard(currentUser);
+                viewMain.Show();
+                this.Hide();
             }
             catch (Exception)
             {

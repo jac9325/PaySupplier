@@ -83,6 +83,16 @@ namespace PaySupplier.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ico_cerrar {
+            get {
+                object obj = ResourceManager.GetObject("ico-cerrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_trash_4341321_120557 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder-trash-4341321_120557", resourceCulture);

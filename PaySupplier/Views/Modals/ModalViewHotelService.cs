@@ -20,11 +20,15 @@ namespace PaySupplier.Views.Modals
     {
         private List<HotelServiceWithName> currentListHotelServiceWithName = new List<HotelServiceWithName>();
         private List<HotelService> currentListHotelService = new List<HotelService>();
-        public HotelServiceWithName currentHotelServiceWithName = new HotelServiceWithName();
-        public List<Service> currentListService = new List<Service>();
+        private List<Service> currentListService = new List<Service>();
         private List<City> currentListCity = new List<City>();
+        private List<Currency> currentListCurrency = new List<Currency>();
+
+        public HotelServiceWithName currentHotelServiceWithName = new HotelServiceWithName();       
         private Hotel currentHotel =  new Hotel();
         public Service currentService;
+        public Currency currentCurrency = new Currency();
+
         string regexPattern = @"^[0-9]*(?:\.[0-9]*)?$";
         private bool EsNuevo = false;
         private int idHotel = 0;
@@ -43,9 +47,11 @@ namespace PaySupplier.Views.Modals
         private void ModalViewHotelService_Load(object sender, EventArgs e)
         {
             ChargeListCity();
+            ChargeListCurrency();
             if (!EsNuevo)
             {
                 ChargeData();
+                btnSave.Text = "Actualizar";
             }
         }
         private void pxEliminar_Click(object sender, EventArgs e)
@@ -83,6 +89,7 @@ namespace PaySupplier.Views.Modals
             auxHotelService.priceConfidencial = Convert.ToDecimal(txtPConfidencial.Text.Trim());
             auxHotelService.priceBooking = Convert.ToDecimal(txtPBooking.Text.Trim());
             auxHotelService.pricePublic = Convert.ToDecimal(txtPPublicado.Text.Trim());
+            auxHotelService.idCurrency = (int)cbCurrency.SelectedValue;
             //-- add datos a la lista
             //-- Comprobar datos repetidos
             bool response = false;
@@ -98,6 +105,7 @@ namespace PaySupplier.Views.Modals
                 currentHotelServiceWithName.priceConfidencial = Convert.ToDecimal(txtPConfidencial.Text.Trim());
                 currentHotelServiceWithName.priceBooking = Convert.ToDecimal(txtPBooking.Text.Trim());
                 currentHotelServiceWithName.pricePublic = Convert.ToDecimal(txtPPublicado.Text.Trim());
+                currentHotelServiceWithName.idCurrency = (int)cbCurrency.SelectedValue;
                 ActualizarDatos();
                 clearFilds();
                 setCountItems();
@@ -116,7 +124,7 @@ namespace PaySupplier.Views.Modals
         public bool validateTextBoxService()
         {
             bool rpta = false;
-            if (txtPBooking.Text == string.Empty || txtPConfidencial.Text == string.Empty || txtPPublicado.Text == string.Empty) 
+            if (txtPBooking.Text == string.Empty || txtPConfidencial.Text == string.Empty || txtPPublicado.Text == string.Empty || currentCurrency == null) 
             {              
                 rpta = true;
             }
@@ -161,6 +169,26 @@ namespace PaySupplier.Views.Modals
             cbCities.DisplayMember = "name";
             cbCities.ValueMember = "idCity";
             cbCities.DataSource = currentListCity;
+        }
+        public void ChargeListCurrency()
+        {
+            currentListCurrency = CCurrency.getCurrency();
+            if (currentListCurrency.Count<= 0)
+            {
+                MessageBox.Show("Error al cargar las monedas", "Pay Supplier", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
+            //asignar al combobox los datos de la lista
+            cbCurrency.Items.Clear();
+            cbCurrency.DisplayMember = "nameCurrency";
+            cbCurrency.ValueMember = "idCurrency";
+            cbCurrency.DataSource = currentListCurrency;
+            if (EsNuevo)
+            {
+                currentCurrency = currentListCurrency.First();
+                cbCurrency.SelectedValue = currentCurrency.idCurrency;
+            }
         }
 
         private void txtSearchService_TextChanged(object sender, EventArgs e)
@@ -275,7 +303,7 @@ namespace PaySupplier.Views.Modals
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-                //Para editar datos 
+            //Para editar datos 
             if (!EsNuevo)
             {
                 //-- Aqui todo para actualizar los datos
@@ -301,6 +329,7 @@ namespace PaySupplier.Views.Modals
                         auxHService.pricePublic = auxHotelServiceWithName.pricePublic;
                         auxHService.priceConfidencial = auxHotelServiceWithName.priceConfidencial;
                         auxHService.priceBooking = auxHotelServiceWithName.priceBooking;
+                        auxHService.idCurrency = (int)cbCurrency.SelectedValue;
                     }
                     else
                     {
@@ -313,6 +342,7 @@ namespace PaySupplier.Views.Modals
                         auxHService.priceBooking  = auxHotelServiceWithName.priceBooking;
                         auxHService.idHotelServices = 0;
                         auxHService.idHotels = currentHotel.idHotels;
+                        auxHService.idCurrency = auxHotelServiceWithName.idCurrency;
                         currentListHotelService.Add(auxHService);
                     }
                 }                
@@ -426,7 +456,9 @@ namespace PaySupplier.Views.Modals
                 nameService = hs.nameService,
                 priceConfidencial = hs.priceConfidencial,
                 pricePublic = hs.pricePublic,
-                priceBooking = hs.priceBooking
+                priceBooking = hs.priceBooking,
+                idCurrency = hs.idCurrency,
+                nameCurrency = hs.nameCurrency
             })
             .ToList();
         }
@@ -455,10 +487,15 @@ namespace PaySupplier.Views.Modals
 
         private void dgvHotelServices_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            
+        }
+
+        private void dgvHotelServices_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
             {
                 int idServiceAux = Convert.ToInt32(dgvHotelServices.CurrentRow.Cells[0].Value);
-                currentHotelServiceWithName = currentListHotelServiceWithName.Find(x=>x.idService == idServiceAux);
+                currentHotelServiceWithName = currentListHotelServiceWithName.Find(x => x.idService == idServiceAux);
                 txtPBooking.Text = currentHotelServiceWithName.priceBooking.ToString();
                 txtPConfidencial.Text = currentHotelServiceWithName.priceConfidencial.ToString();
                 txtPPublicado.Text = currentHotelServiceWithName.pricePublic.ToString();
@@ -466,7 +503,26 @@ namespace PaySupplier.Views.Modals
                 currentService = new Service();
                 currentService.idService = currentHotelServiceWithName.idService;
                 currentService.nameService = currentHotelServiceWithName.nameService;
-                lblServicio.Text = currentService.nameService;              
+                lblServicio.Text = currentService.nameService;
+                cbCurrency.SelectedValue = currentHotelServiceWithName.idCurrency;
+            }
+        }
+
+        private void cbCurrency_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int idCurrency = (int)cbCities.SelectedValue;
+            currentCurrency = currentListCurrency.Find(x=>x.idCurrency == idCurrency);
+        }
+
+        private void chkMoneda_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkMoneda.Checked)
+            {
+                cbCurrency.Enabled = true;
+            }
+            else
+            {
+                cbCurrency.Enabled = false;
             }
         }
     }

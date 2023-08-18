@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNameHotel = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -52,6 +52,7 @@
             this.txtEmailHotel = new System.Windows.Forms.TextBox();
             this.txtDirectionHotel = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbCurrency = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.pxEliminar = new System.Windows.Forms.PictureBox();
             this.pxAgregar = new System.Windows.Forms.PictureBox();
@@ -59,6 +60,7 @@
             this.dgvHotelServices = new System.Windows.Forms.DataGridView();
             this.txtPPublicado = new System.Windows.Forms.TextBox();
             this.lblDate = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPBooking = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -72,6 +74,8 @@
             this.dgvServices = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.lblServicio = new System.Windows.Forms.Label();
+            this.dtpUpdated = new System.Windows.Forms.DateTimePicker();
+            this.label17 = new System.Windows.Forms.Label();
             this.idServiceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameServiceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,6 +88,7 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceBookingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hotelServiceWithNameBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chkMoneda = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pxEliminar)).BeginInit();
@@ -159,6 +164,7 @@
             // 
             // cbCities
             // 
+            this.cbCities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCities.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCities.FormattingEnabled = true;
             this.cbCities.Location = new System.Drawing.Point(10, 515);
@@ -190,7 +196,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 379);
+            this.label7.Location = new System.Drawing.Point(7, 376);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(203, 18);
             this.label7.TabIndex = 3;
@@ -249,7 +255,7 @@
             // txtDescription
             // 
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(10, 400);
+            this.txtDescription.Location = new System.Drawing.Point(10, 397);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(300, 81);
@@ -293,13 +299,18 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.chkMoneda);
+            this.groupBox2.Controls.Add(this.cbCurrency);
             this.groupBox2.Controls.Add(this.btnSave);
             this.groupBox2.Controls.Add(this.pxEliminar);
             this.groupBox2.Controls.Add(this.pxAgregar);
+            this.groupBox2.Controls.Add(this.dtpUpdated);
             this.groupBox2.Controls.Add(this.dtpFechaCreación);
             this.groupBox2.Controls.Add(this.dgvHotelServices);
             this.groupBox2.Controls.Add(this.txtPPublicado);
+            this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.lblDate);
+            this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.txtPBooking);
             this.groupBox2.Controls.Add(this.label9);
@@ -314,6 +325,17 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hotel Servicios";
+            // 
+            // cbCurrency
+            // 
+            this.cbCurrency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCurrency.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCurrency.FormattingEnabled = true;
+            this.cbCurrency.Location = new System.Drawing.Point(18, 474);
+            this.cbCurrency.Name = "cbCurrency";
+            this.cbCurrency.Size = new System.Drawing.Size(205, 28);
+            this.cbCurrency.TabIndex = 11;
+            this.cbCurrency.SelectedIndexChanged += new System.EventHandler(this.cbCurrency_SelectedIndexChanged);
             // 
             // btnSave
             // 
@@ -358,9 +380,9 @@
             // dtpFechaCreación
             // 
             this.dtpFechaCreación.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaCreación.Location = new System.Drawing.Point(18, 474);
+            this.dtpFechaCreación.Location = new System.Drawing.Point(341, 257);
             this.dtpFechaCreación.Name = "dtpFechaCreación";
-            this.dtpFechaCreación.Size = new System.Drawing.Size(275, 27);
+            this.dtpFechaCreación.Size = new System.Drawing.Size(267, 27);
             this.dtpFechaCreación.TabIndex = 5;
             // 
             // dgvHotelServices
@@ -370,14 +392,14 @@
             this.dgvHotelServices.AutoGenerateColumns = false;
             this.dgvHotelServices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHotelServices.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHotelServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHotelServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvHotelServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHotelServices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idServiceDataGridViewTextBoxColumn,
@@ -386,31 +408,32 @@
             this.dataGridViewTextBoxColumn1,
             this.priceBookingDataGridViewTextBoxColumn});
             this.dgvHotelServices.DataSource = this.hotelServiceWithNameBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Thistle;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHotelServices.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Thistle;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHotelServices.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvHotelServices.Location = new System.Drawing.Point(6, 31);
             this.dgvHotelServices.Name = "dgvHotelServices";
             this.dgvHotelServices.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHotelServices.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHotelServices.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvHotelServices.RowHeadersVisible = false;
             this.dgvHotelServices.RowHeadersWidth = 51;
             this.dgvHotelServices.RowTemplate.Height = 24;
             this.dgvHotelServices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHotelServices.Size = new System.Drawing.Size(543, 150);
             this.dgvHotelServices.TabIndex = 4;
+            this.dgvHotelServices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHotelServices_CellClick);
             this.dgvHotelServices.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHotelServices_CellContentClick);
             // 
             // txtPPublicado
@@ -429,11 +452,21 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(15, 450);
+            this.lblDate.Location = new System.Drawing.Point(338, 236);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(132, 18);
             this.lblDate.TabIndex = 3;
             this.lblDate.Text = "Fecha Creación:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(15, 450);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(68, 18);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Moneda";
             // 
             // label10
             // 
@@ -549,14 +582,14 @@
             this.dgvServices.AllowUserToDeleteRows = false;
             this.dgvServices.AutoGenerateColumns = false;
             this.dgvServices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvServices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idServiceDataGridViewTextBoxColumn1,
@@ -595,6 +628,24 @@
             this.lblServicio.Size = new System.Drawing.Size(214, 29);
             this.lblServicio.TabIndex = 3;
             this.lblServicio.Text = "No Seleccionado";
+            // 
+            // dtpUpdated
+            // 
+            this.dtpUpdated.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpUpdated.Location = new System.Drawing.Point(341, 333);
+            this.dtpUpdated.Name = "dtpUpdated";
+            this.dtpUpdated.Size = new System.Drawing.Size(267, 27);
+            this.dtpUpdated.TabIndex = 5;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(338, 312);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(166, 18);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Ultima Actualización:";
             // 
             // idServiceDataGridViewTextBoxColumn1
             // 
@@ -693,6 +744,18 @@
             // 
             this.hotelServiceWithNameBindingSource.DataSource = typeof(PaySupplier.Models.HotelServiceWithName);
             // 
+            // chkMoneda
+            // 
+            this.chkMoneda.AutoSize = true;
+            this.chkMoneda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMoneda.Location = new System.Drawing.Point(18, 508);
+            this.chkMoneda.Name = "chkMoneda";
+            this.chkMoneda.Size = new System.Drawing.Size(126, 22);
+            this.chkMoneda.TabIndex = 12;
+            this.chkMoneda.Text = "Moneda Única";
+            this.chkMoneda.UseVisualStyleBackColor = true;
+            this.chkMoneda.CheckedChanged += new System.EventHandler(this.chkMoneda_CheckedChanged);
+            // 
             // ModalViewHotelService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -777,5 +840,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn priceConfidencialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceBookingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox cbCurrency;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DateTimePicker dtpUpdated;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.CheckBox chkMoneda;
     }
 }

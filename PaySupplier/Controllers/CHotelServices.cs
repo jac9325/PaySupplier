@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
+using System.Windows.Forms;
 
 namespace PaySupplier.Controllers
 {
@@ -20,8 +21,8 @@ namespace PaySupplier.Controllers
                 {
                     connection.Open();
                     //   
-                    var sql = "INSERT INTO hotelservices (idHotels, idService, dateCreated, dateUpdate, priceConfidencial, priceBooking, pricePublic)" +
-                        "VALUES (@idHotels, @idService, @dateCreated, @dateUpdate, @priceConfidencial, @priceBooking, @pricePublic)";
+                    var sql = "INSERT INTO hotelservices (idHotels, idService, dateCreated, dateUpdate, priceConfidencial, priceBooking, pricePublic,idCurrency)" +
+                        "VALUES (@idHotels, @idService, @dateCreated, @dateUpdate, @priceConfidencial, @priceBooking, @pricePublic, @idCurrency)";
                     // Use the Query method to execute the query and return a list of objects    
                     int rowsAffected = connection.Execute(sql, currentHotelService);
                     return rowsAffected > 0;
@@ -44,7 +45,7 @@ namespace PaySupplier.Controllers
                     //   
                     var sql = "UPDATE hotelservices SET dateUpdate = @dateUpdate," +
                         " priceConfidencial = @priceConfidencial, pricePublic = @pricePublic," +
-                        " priceBooking = @priceBooking WHERE idHotelServices = @idHotelServices;";
+                        " priceBooking = @priceBooking, idCurrency = @idCurrency WHERE idHotelServices = @idHotelServices;";
                     // Use the Query method to execute the query and return a list of objects    
                     int rowsAffected = connection.Execute(sql, currentHotelService);
                     return rowsAffected > 0;
@@ -56,28 +57,31 @@ namespace PaySupplier.Controllers
                 return false;
             }
         }
-        public static List<Hotel> getHotelService()
+        public static List<HotelWithServices> getHotelService()
         {
-            List<Hotel> hotels = new List<Hotel>();
+            List<HotelWithServices> hotels = new List<HotelWithServices>();
             string connectionString = connection.GetConnectionString();
-            try
+            //try
             {
                 using (var connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
                     //   
-                    var sql = "SELECT * FROM hotels WHERE statusHotel = 1";
-
-                    hotels = connection.Query<Hotel>(sql).ToList();
+                    var sql = "SELECT h.idHotels, h.nameHotel,h.phoneNumber AS telefono, h.mobileNumber AS celular, h.categoryHotel, c.name AS nameCity, h.address, h.email,GROUP_CONCAT(s.nameService) AS nameServices, GROUP_CONCAT(hs.priceConfidencial) AS priceConfidencial, GROUP_CONCAT(hs.pricePublic) AS pricePublic, GROUP_CONCAT(hs.priceBooking) AS priceBooking, GROUP_CONCAT(s.idService) AS idServices FROM hotelservices hs JOIN hotels h ON hs.idHotels = h.idHotels JOIN services s ON hs.idService = s.idService JOIN cities c ON h.idCity = c.idCity GROUP BY h.idHotels, h.nameHotel ORDER BY h.idHotels DESC LIMIT 20;";
+                   var hotels2 = connection.Query<HotelWithServices>(sql).ToList();
+                   if (hotels2.Count>0)
+                    {
+                        MessageBox.Show("si entro");
+                    }
                     return hotels;
                 }
             }
-            catch (Exception)
+            /*catch (Exception)
             {
                 // Manejo de errores
 
                 return hotels;
-            }
+            }*/
         }
         public static List<HotelService> getHotelServiceByIdHotel(int idHotel)
         {
@@ -89,7 +93,7 @@ namespace PaySupplier.Controllers
                 {
                     connection.Open();
                     //   
-                    var query = "SELECT hs.*, s.nameService FROM hotelservices hs JOIN services s ON hs.idService = s.idService WHERE idHotels = @HotelId;";
+                    var query = "SELECT hs.*, s.nameService, c.nameCurrency FROM hotelservices hs JOIN services s ON hs.idService = s.idService JOIN currencys c ON hs.idCurrency = c.idCurrency WHERE idHotels = @HotelId;";
                     hotelService = connection.Query<HotelService>(query, new { HotelId = idHotel }).ToList();
                     return hotelService;
                 }
