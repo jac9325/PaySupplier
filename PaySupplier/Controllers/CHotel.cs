@@ -274,7 +274,7 @@ namespace PaySupplier.Controllers
             List<HotelWithServices> currentHotelWithService = new List<HotelWithServices>();
             List<HotelDGV> currentListHotelDGV = new List<HotelDGV>();
             string connectionString = connection.GetConnectionString();
-            //try
+            try
             {
                 using (var connection = new MySqlConnection(connectionString))
                 {
@@ -282,7 +282,7 @@ namespace PaySupplier.Controllers
                     //   
                     // Paso 1: Obtener los detalles básicos de los hoteles
                     //HotelList = connection.Query<Hotel>("SELECT h.*, c.name as nameCity FROM hotels h JOIN cities c on h.idCity = c.idCity WHERE statusHotel = 1 ORDER BY idHotels DESC LIMIT 20;").ToList();
-                    var sql = "SELECT h.idHotels, h.nameHotel,h.phoneNumber AS telefono, h.mobileNumber AS celular, h.categoryHotel, c.name AS nameCity, h.address, h.email,GROUP_CONCAT(s.nameService) AS nameServices, GROUP_CONCAT(hs.priceConfidencial) AS priceConfidencial, GROUP_CONCAT(hs.pricePublic) AS pricePublic, GROUP_CONCAT(hs.priceBooking) AS priceBooking, GROUP_CONCAT(s.idService) AS idServices FROM hotelservices hs JOIN hotels h ON hs.idHotels = h.idHotels JOIN services s ON hs.idService = s.idService JOIN cities c ON h.idCity = c.idCity GROUP BY h.idHotels, h.nameHotel ORDER BY h.idHotels DESC LIMIT 20;";
+                    var sql = "SELECT h.idHotels, h.nameHotel,h.phoneNumber AS telefono, h.mobileNumber AS celular, h.categoryHotel, c.name AS nameCity, h.address, h.email,GROUP_CONCAT(s.nameService) AS nameServices, GROUP_CONCAT(hs.priceConfidencial) AS priceConfidencial, GROUP_CONCAT(hs.pricePublic) AS pricePublic, GROUP_CONCAT(hs.priceBooking) AS priceBooking, GROUP_CONCAT(s.idService) AS idServices FROM hotelservices hs JOIN hotels h ON hs.idHotels = h.idHotels JOIN services s ON hs.idService = s.idService JOIN cities c ON h.idCity = c.idCity GROUP BY h.idHotels, h.nameHotel ORDER BY h.idHotels DESC LIMIT 10;";
                     currentHotelWithService = connection.Query<HotelWithServices>(sql).ToList();
                     if (currentHotelWithService.Count > 0)
                     {
@@ -298,8 +298,7 @@ namespace PaySupplier.Controllers
                             string[] arrayPricesBooking = service.priceBooking.Split(',');
                             string[] arrayPricesPublic = service.pricePublic.Split(',');
 
-                            //--construir datos para agregar a la clase hoteldgv
-                            
+                            //--construir datos para agregar a la clase hoteldgv              
                             hoteldgv.idHotels = service.idHotels;
                             hoteldgv.nameHotel = service.nameHotel;
                             hoteldgv.phoneNumber = service.telefono;
@@ -317,81 +316,83 @@ namespace PaySupplier.Controllers
                                     case "habitacionsimple":
                                         hoteldgv.nameService1 = arrayNameServices[valueCount].ToString();
                                         hoteldgv.precioBooking1 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioConfidencial1= Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioPublic1 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
+                                        hoteldgv.precioConfidencial1= Convert.ToDecimal(arrayPricesConfidencial[valueCount]);
+                                        hoteldgv.precioPublic1 = Convert.ToDecimal(arrayPricesPublic[valueCount]);
                                         hoteldgv.idServices1 = Convert.ToInt32(arrayIdServices[valueCount]);
                    
                                         break;
                                     case "habitaciondoble":
                                         hoteldgv.nameService2 = arrayNameServices[valueCount].ToString();
                                         hoteldgv.precioBooking2 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioConfidencial2 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioPublic2 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
+                                        hoteldgv.precioConfidencial2 = Convert.ToDecimal(arrayPricesConfidencial[valueCount]);
+                                        hoteldgv.precioPublic2 = Convert.ToDecimal(arrayPricesPublic[valueCount]);
                                         hoteldgv.idServices2 = Convert.ToInt32(arrayIdServices[valueCount]);
 
                                         break;
                                     case "habitaciontriple":
                                         hoteldgv.nameService3 = arrayNameServices[valueCount].ToString();
                                         hoteldgv.precioBooking3 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioConfidencial3 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioPublic3 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
+                                        hoteldgv.precioConfidencial3 = Convert.ToDecimal(arrayPricesConfidencial[valueCount]);
+                                        hoteldgv.precioPublic3 = Convert.ToDecimal(arrayPricesPublic[valueCount]);
                                         hoteldgv.idServices3 = Convert.ToInt32(arrayIdServices[valueCount]);
 
                                         break;
                                     case "habitacioncuadruple":
                                         hoteldgv.nameService4 = arrayNameServices[valueCount].ToString();
                                         hoteldgv.precioBooking4 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioConfidencial4 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioPublic4 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
+                                        hoteldgv.precioConfidencial4 = Convert.ToDecimal(arrayPricesConfidencial[valueCount]);
+                                        hoteldgv.precioPublic4 = Convert.ToDecimal(arrayPricesPublic[valueCount]);
                                         hoteldgv.idServices4 = Convert.ToInt32(arrayIdServices[valueCount]);
 
                                         break;
                                     case "habitacionsuite":
                                         hoteldgv.nameService5 = arrayNameServices[valueCount].ToString();
                                         hoteldgv.precioBooking5 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioConfidencial5 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioPublic5 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
+                                        hoteldgv.precioConfidencial5 = Convert.ToDecimal(arrayPricesConfidencial[valueCount]);
+                                        hoteldgv.precioPublic5 = Convert.ToDecimal(arrayPricesPublic[valueCount]);
                                         hoteldgv.idServices5 = Convert.ToInt32(arrayIdServices[valueCount]);
 
                                         break;
                                     case "habitacionmatrimonial":
                                         hoteldgv.nameService6 = arrayNameServices[valueCount].ToString();
                                         hoteldgv.precioBooking6 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioConfidencial6 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioPublic6 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
+                                        hoteldgv.precioConfidencial6 = Convert.ToDecimal(arrayPricesConfidencial[valueCount]);
+                                        hoteldgv.precioPublic6 = Convert.ToDecimal(arrayPricesPublic[valueCount]);
                                         hoteldgv.idServices6 = Convert.ToInt32(arrayIdServices[valueCount]);
 
                                         break;
                                     case "habitacionking":
                                         hoteldgv.nameService7 = arrayNameServices[valueCount].ToString();
                                         hoteldgv.precioBooking7 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioConfidencial7 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioPublic7 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
+                                        hoteldgv.precioConfidencial7 = Convert.ToDecimal(arrayPricesConfidencial[valueCount]);
+                                        hoteldgv.precioPublic7 = Convert.ToDecimal(arrayPricesPublic[valueCount]);
                                         hoteldgv.idServices7 = Convert.ToInt32(arrayIdServices[valueCount]);
 
                                         break;
                                     default:
                                         hoteldgv.nameService8 = arrayNameServices[valueCount].ToString();
                                         hoteldgv.precioBooking8 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioConfidencial8 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
-                                        hoteldgv.precioPublic8 = Convert.ToDecimal(arrayPricesBooking[valueCount]);
+                                        hoteldgv.precioConfidencial8 = Convert.ToDecimal(arrayPricesConfidencial[valueCount]);
+                                        hoteldgv.precioPublic8 = Convert.ToDecimal(arrayPricesPublic[valueCount]);
                                         hoteldgv.idServices8 = Convert.ToInt32(arrayIdServices[valueCount]);
                                         break;
                                 }
                                 valueCount++;
-                                currentListHotelDGV.Add(hoteldgv);
+                               
                             }
-                        }
+                            currentListHotelDGV.Add(hoteldgv);
+                        }//--Fin foreach
                     }
-                    
+                    if (currentListHotelDGV.Count>0)
+                        return currentListHotelDGV;
                     return currentListHotelDGV;
                 }
             }
-            /*catch (Exception)
+            catch (Exception)
             {
                 // Manejo de errores
                 return currentListHotelDGV;
-            }*/
+            }
         }
         public static List<Hotel> getHotelLike(string searchText)
         {
@@ -403,7 +404,7 @@ namespace PaySupplier.Controllers
                 {
                     connection.Open();
                     searchText = "%" + searchText + "%";
-                    HotelList = connection.Query<Hotel>("SELECT h.*, c.name AS nameCity FROM hotels h JOIN cities c ON h.idCity = c.idCity WHERE statusHotel = 1 AND h.nameHotel LIKE @SearchText", new { SearchText = searchText }).ToList();
+                    HotelList = connection.Query<Hotel>("SELECT h.idHotels, h.nameHotel, h.phoneNumber AS telefono, h.mobileNumber AS celular, h.categoryHotel, c.name AS nameCity, h.address, h.email, GROUP_CONCAT(s.nameService) AS nameServices, GROUP_CONCAT(hs.priceConfidencial) AS priceConfidencial, GROUP_CONCAT(hs.pricePublic) AS pricePublic, GROUP_CONCAT(hs.priceBooking) AS priceBooking, GROUP_CONCAT(s.idService) AS idServices FROM hotelservices hs JOIN hotels h ON hs.idHotels = h.idHotels JOIN services s ON hs.idService = s.idService JOIN cities c ON h.idCity = c.idCity WHERE h.nameHotel LIKE '@SearchText'  GROUP BY h.idHotels, h.nameHotel ORDER BY h.idHotels DESC LIMIT 10;", new { SearchText = searchText }).ToList();
                     return HotelList;
                 }
             }

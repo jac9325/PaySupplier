@@ -29,34 +29,52 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewHotel));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.HotelBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.txtSearchHotel = new System.Windows.Forms.TextBox();
             this.dgvHotels = new System.Windows.Forms.DataGridView();
             this.bntNewHotel = new System.Windows.Forms.Button();
             this.btnSeeHotel = new System.Windows.Forms.Button();
-            this.HotelsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idHotelsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRedInitial = new System.Windows.Forms.Panel();
+            this.pHDoble = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.pHTriple = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Reservar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.idHotelsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameCityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameHotelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryHotelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -112,11 +130,19 @@
             this.statusHotelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionHotelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HotelsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HotelBindingNavigator)).BeginInit();
-            this.HotelBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHotels)).BeginInit();
+            this.pRedInitial.SuspendLayout();
+            this.pHDoble.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.pHTriple.SuspendLayout();
+            this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HotelsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,141 +168,26 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.HotelBindingNavigator);
-            this.panel2.Controls.Add(this.txtSearchHotel);
-            this.panel2.Controls.Add(this.dgvHotels);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(209, 84);
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 84);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1409, 701);
+            this.panel2.Size = new System.Drawing.Size(1618, 701);
             this.panel2.TabIndex = 2;
-            // 
-            // HotelBindingNavigator
-            // 
-            this.HotelBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.HotelBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.HotelBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.HotelBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.HotelBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
-            this.HotelBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.HotelBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.HotelBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.HotelBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.HotelBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.HotelBindingNavigator.Name = "HotelBindingNavigator";
-            this.HotelBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.HotelBindingNavigator.Size = new System.Drawing.Size(1409, 27);
-            this.HotelBindingNavigator.TabIndex = 2;
-            this.HotelBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // txtSearchHotel
             // 
             this.txtSearchHotel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchHotel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchHotel.Location = new System.Drawing.Point(16, 70);
+            this.txtSearchHotel.Location = new System.Drawing.Point(3, 66);
             this.txtSearchHotel.Multiline = true;
             this.txtSearchHotel.Name = "txtSearchHotel";
-            this.txtSearchHotel.Size = new System.Drawing.Size(1381, 47);
+            this.txtSearchHotel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtSearchHotel.Size = new System.Drawing.Size(1603, 47);
             this.txtSearchHotel.TabIndex = 1;
-            this.txtSearchHotel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSearchHotel.TextChanged += new System.EventHandler(this.txtSearchHotel_TextChanged);
             // 
             // dgvHotels
@@ -289,10 +200,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvHotels.AutoGenerateColumns = false;
-            this.dgvHotels.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.dgvHotels.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHotels.BackgroundColor = System.Drawing.Color.Snow;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -301,8 +213,6 @@
             this.dgvHotels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHotels.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idHotelsDataGridViewTextBoxColumn,
-            this.Edit,
-            this.Reservar,
             this.nameCityDataGridViewTextBoxColumn,
             this.nameHotelDataGridViewTextBoxColumn,
             this.categoryHotelDataGridViewTextBoxColumn,
@@ -357,29 +267,32 @@
             this.addressDataGridViewTextBoxColumn,
             this.statusHotelDataGridViewTextBoxColumn,
             this.descriptionHotelDataGridViewTextBoxColumn,
-            this.idCityDataGridViewTextBoxColumn});
+            this.idCityDataGridViewTextBoxColumn,
+            this.Edit,
+            this.Reservar});
             this.dgvHotels.DataSource = this.HotelsBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHotels.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHotels.DefaultCellStyle = dataGridViewCellStyle20;
             this.dgvHotels.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvHotels.Location = new System.Drawing.Point(16, 123);
+            this.dgvHotels.Location = new System.Drawing.Point(3, 0);
             this.dgvHotels.Name = "dgvHotels";
             this.dgvHotels.ReadOnly = true;
             this.dgvHotels.RowHeadersVisible = false;
             this.dgvHotels.RowHeadersWidth = 51;
             this.dgvHotels.RowTemplate.Height = 24;
             this.dgvHotels.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHotels.Size = new System.Drawing.Size(1381, 575);
+            this.dgvHotels.Size = new System.Drawing.Size(1615, 491);
             this.dgvHotels.TabIndex = 0;
             this.dgvHotels.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHotels_CellClick);
             this.dgvHotels.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvHotels_CellFormatting);
             this.dgvHotels.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvHotels_RowPrePaint);
+            this.dgvHotels.SizeChanged += new System.EventHandler(this.dgvHotels_SizeChanged);
             // 
             // bntNewHotel
             // 
@@ -388,9 +301,9 @@
             this.bntNewHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntNewHotel.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntNewHotel.ForeColor = System.Drawing.Color.White;
-            this.bntNewHotel.Location = new System.Drawing.Point(12, 109);
+            this.bntNewHotel.Location = new System.Drawing.Point(41, 6);
             this.bntNewHotel.Name = "bntNewHotel";
-            this.bntNewHotel.Size = new System.Drawing.Size(191, 56);
+            this.bntNewHotel.Size = new System.Drawing.Size(163, 56);
             this.bntNewHotel.TabIndex = 3;
             this.bntNewHotel.Text = "Nuevo Hotel";
             this.bntNewHotel.UseVisualStyleBackColor = false;
@@ -398,16 +311,211 @@
             // 
             // btnSeeHotel
             // 
-            this.btnSeeHotel.Location = new System.Drawing.Point(12, 191);
+            this.btnSeeHotel.Location = new System.Drawing.Point(235, 8);
             this.btnSeeHotel.Name = "btnSeeHotel";
-            this.btnSeeHotel.Size = new System.Drawing.Size(191, 46);
+            this.btnSeeHotel.Size = new System.Drawing.Size(163, 54);
             this.btnSeeHotel.TabIndex = 3;
             this.btnSeeHotel.Text = "Ver Hotel";
             this.btnSeeHotel.UseVisualStyleBackColor = true;
             // 
-            // HotelsBindingSource
+            // pRedInitial
             // 
-            this.HotelsBindingSource.DataSource = typeof(PaySupplier.Models.HotelDGV);
+            this.pRedInitial.BackColor = System.Drawing.Color.Firebrick;
+            this.pRedInitial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pRedInitial.Controls.Add(this.label2);
+            this.pRedInitial.Location = new System.Drawing.Point(424, 0);
+            this.pRedInitial.Name = "pRedInitial";
+            this.pRedInitial.Size = new System.Drawing.Size(205, 25);
+            this.pRedInitial.TabIndex = 3;
+            // 
+            // pHDoble
+            // 
+            this.pHDoble.BackColor = System.Drawing.Color.White;
+            this.pHDoble.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pHDoble.Controls.Add(this.label4);
+            this.pHDoble.Location = new System.Drawing.Point(629, 0);
+            this.pHDoble.Name = "pHDoble";
+            this.pHDoble.Size = new System.Drawing.Size(205, 25);
+            this.pHDoble.TabIndex = 3;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.bntNewHotel);
+            this.panel5.Controls.Add(this.btnSeeHotel);
+            this.panel5.Controls.Add(this.txtSearchHotel);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1618, 116);
+            this.panel5.TabIndex = 4;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.panel10);
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Controls.Add(this.pHDoble);
+            this.panel6.Controls.Add(this.pHTriple);
+            this.panel6.Controls.Add(this.panel12);
+            this.panel6.Controls.Add(this.panel9);
+            this.panel6.Controls.Add(this.pRedInitial);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 116);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1618, 26);
+            this.panel6.TabIndex = 5;
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panel7.Location = new System.Drawing.Point(3, 1);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(423, 26);
+            this.panel7.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.dgvHotels);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(0, 142);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1618, 559);
+            this.panel8.TabIndex = 6;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.label5);
+            this.panel9.Location = new System.Drawing.Point(1033, 1);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(200, 25);
+            this.panel9.TabIndex = 4;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Firebrick;
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.label6);
+            this.panel10.Location = new System.Drawing.Point(1232, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(196, 25);
+            this.panel10.TabIndex = 4;
+            // 
+            // pHTriple
+            // 
+            this.pHTriple.BackColor = System.Drawing.Color.Firebrick;
+            this.pHTriple.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pHTriple.Controls.Add(this.label3);
+            this.pHTriple.Location = new System.Drawing.Point(834, 0);
+            this.pHTriple.Name = "pHTriple";
+            this.pHTriple.Size = new System.Drawing.Size(200, 25);
+            this.pHTriple.TabIndex = 4;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.label7);
+            this.panel12.Location = new System.Drawing.Point(1428, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(196, 25);
+            this.panel12.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(63, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "H. Simple";
+            // 
+            // Edit
+            // 
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
+            this.Edit.DefaultCellStyle = dataGridViewCellStyle19;
+            this.Edit.HeaderText = "Edit";
+            this.Edit.MinimumWidth = 45;
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            this.Edit.Text = "Editar";
+            this.Edit.ToolTipText = "Editar";
+            this.Edit.UseColumnTextForButtonValue = true;
+            // 
+            // Reservar
+            // 
+            this.Reservar.HeaderText = "Res";
+            this.Reservar.MinimumWidth = 45;
+            this.Reservar.Name = "Reservar";
+            this.Reservar.ReadOnly = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(52, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 18);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "H. Triple";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(56, 2);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 18);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "H. Doble";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(43, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 18);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "H. Cuadruple";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(32, 4);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 18);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "H. Matrimonial";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(43, 4);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 18);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "H. Suite";
             // 
             // idHotelsDataGridViewTextBoxColumn
             // 
@@ -417,32 +525,6 @@
             this.idHotelsDataGridViewTextBoxColumn.Name = "idHotelsDataGridViewTextBoxColumn";
             this.idHotelsDataGridViewTextBoxColumn.ReadOnly = true;
             this.idHotelsDataGridViewTextBoxColumn.Visible = false;
-            this.idHotelsDataGridViewTextBoxColumn.Width = 24;
-            // 
-            // Edit
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.Edit.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Edit.HeaderText = "Editar";
-            this.Edit.MinimumWidth = 55;
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Text = "Editar";
-            this.Edit.ToolTipText = "Editar";
-            this.Edit.UseColumnTextForButtonValue = true;
-            this.Edit.Width = 65;
-            // 
-            // Reservar
-            // 
-            this.Reservar.HeaderText = "Reservar";
-            this.Reservar.MinimumWidth = 6;
-            this.Reservar.Name = "Reservar";
-            this.Reservar.ReadOnly = true;
-            this.Reservar.Width = 90;
             // 
             // nameCityDataGridViewTextBoxColumn
             // 
@@ -451,15 +533,17 @@
             this.nameCityDataGridViewTextBoxColumn.MinimumWidth = 100;
             this.nameCityDataGridViewTextBoxColumn.Name = "nameCityDataGridViewTextBoxColumn";
             this.nameCityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameCityDataGridViewTextBoxColumn.Visible = false;
             // 
             // nameHotelDataGridViewTextBoxColumn
             // 
             this.nameHotelDataGridViewTextBoxColumn.DataPropertyName = "nameHotel";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameHotelDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.nameHotelDataGridViewTextBoxColumn.HeaderText = "Hotel";
-            this.nameHotelDataGridViewTextBoxColumn.MinimumWidth = 180;
+            this.nameHotelDataGridViewTextBoxColumn.MinimumWidth = 150;
             this.nameHotelDataGridViewTextBoxColumn.Name = "nameHotelDataGridViewTextBoxColumn";
             this.nameHotelDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameHotelDataGridViewTextBoxColumn.Width = 180;
             // 
             // categoryHotelDataGridViewTextBoxColumn
             // 
@@ -468,33 +552,32 @@
             this.categoryHotelDataGridViewTextBoxColumn.MinimumWidth = 100;
             this.categoryHotelDataGridViewTextBoxColumn.Name = "categoryHotelDataGridViewTextBoxColumn";
             this.categoryHotelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.categoryHotelDataGridViewTextBoxColumn.Visible = false;
             // 
             // phoneNumberDataGridViewTextBoxColumn
             // 
             this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "phoneNumber";
             this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Teléfono";
-            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 80;
+            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 70;
             this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
             this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.phoneNumberDataGridViewTextBoxColumn.Width = 80;
             // 
             // mobileNumberDataGridViewTextBoxColumn
             // 
             this.mobileNumberDataGridViewTextBoxColumn.DataPropertyName = "mobileNumber";
             this.mobileNumberDataGridViewTextBoxColumn.HeaderText = "Celular";
-            this.mobileNumberDataGridViewTextBoxColumn.MinimumWidth = 80;
+            this.mobileNumberDataGridViewTextBoxColumn.MinimumWidth = 70;
             this.mobileNumberDataGridViewTextBoxColumn.Name = "mobileNumberDataGridViewTextBoxColumn";
             this.mobileNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mobileNumberDataGridViewTextBoxColumn.Width = 80;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "E mail";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 180;
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 145;
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Width = 180;
+            this.emailDataGridViewTextBoxColumn.Visible = false;
             // 
             // idServices1DataGridViewTextBoxColumn
             // 
@@ -504,7 +587,6 @@
             this.idServices1DataGridViewTextBoxColumn.Name = "idServices1DataGridViewTextBoxColumn";
             this.idServices1DataGridViewTextBoxColumn.ReadOnly = true;
             this.idServices1DataGridViewTextBoxColumn.Visible = false;
-            this.idServices1DataGridViewTextBoxColumn.Width = 24;
             // 
             // nameService1DataGridViewTextBoxColumn
             // 
@@ -513,34 +595,37 @@
             this.nameService1DataGridViewTextBoxColumn.MinimumWidth = 110;
             this.nameService1DataGridViewTextBoxColumn.Name = "nameService1DataGridViewTextBoxColumn";
             this.nameService1DataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameService1DataGridViewTextBoxColumn.Width = 110;
+            this.nameService1DataGridViewTextBoxColumn.Visible = false;
             // 
             // precioConfidencial1DataGridViewTextBoxColumn
             // 
             this.precioConfidencial1DataGridViewTextBoxColumn.DataPropertyName = "precioConfidencial1";
-            this.precioConfidencial1DataGridViewTextBoxColumn.HeaderText = "P Conf.";
-            this.precioConfidencial1DataGridViewTextBoxColumn.MinimumWidth = 92;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Firebrick;
+            this.precioConfidencial1DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.precioConfidencial1DataGridViewTextBoxColumn.HeaderText = "Conf";
+            this.precioConfidencial1DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioConfidencial1DataGridViewTextBoxColumn.Name = "precioConfidencial1DataGridViewTextBoxColumn";
             this.precioConfidencial1DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioConfidencial1DataGridViewTextBoxColumn.Width = 92;
             // 
             // precioBooking1DataGridViewTextBoxColumn
             // 
             this.precioBooking1DataGridViewTextBoxColumn.DataPropertyName = "precioBooking1";
-            this.precioBooking1DataGridViewTextBoxColumn.HeaderText = "P Booking";
-            this.precioBooking1DataGridViewTextBoxColumn.MinimumWidth = 92;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Firebrick;
+            this.precioBooking1DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.precioBooking1DataGridViewTextBoxColumn.HeaderText = "Book";
+            this.precioBooking1DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioBooking1DataGridViewTextBoxColumn.Name = "precioBooking1DataGridViewTextBoxColumn";
             this.precioBooking1DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioBooking1DataGridViewTextBoxColumn.Width = 92;
             // 
             // precioPublic1DataGridViewTextBoxColumn
             // 
             this.precioPublic1DataGridViewTextBoxColumn.DataPropertyName = "precioPublic1";
-            this.precioPublic1DataGridViewTextBoxColumn.HeaderText = "P Publico";
-            this.precioPublic1DataGridViewTextBoxColumn.MinimumWidth = 92;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Firebrick;
+            this.precioPublic1DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.precioPublic1DataGridViewTextBoxColumn.HeaderText = "Pub";
+            this.precioPublic1DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioPublic1DataGridViewTextBoxColumn.Name = "precioPublic1DataGridViewTextBoxColumn";
             this.precioPublic1DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioPublic1DataGridViewTextBoxColumn.Width = 92;
             // 
             // idServices2DataGridViewTextBoxColumn
             // 
@@ -550,7 +635,6 @@
             this.idServices2DataGridViewTextBoxColumn.Name = "idServices2DataGridViewTextBoxColumn";
             this.idServices2DataGridViewTextBoxColumn.ReadOnly = true;
             this.idServices2DataGridViewTextBoxColumn.Visible = false;
-            this.idServices2DataGridViewTextBoxColumn.Width = 24;
             // 
             // nameService2DataGridViewTextBoxColumn
             // 
@@ -559,34 +643,37 @@
             this.nameService2DataGridViewTextBoxColumn.MinimumWidth = 110;
             this.nameService2DataGridViewTextBoxColumn.Name = "nameService2DataGridViewTextBoxColumn";
             this.nameService2DataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameService2DataGridViewTextBoxColumn.Width = 110;
+            this.nameService2DataGridViewTextBoxColumn.Visible = false;
             // 
             // precioConfidencial2DataGridViewTextBoxColumn
             // 
             this.precioConfidencial2DataGridViewTextBoxColumn.DataPropertyName = "precioConfidencial2";
-            this.precioConfidencial2DataGridViewTextBoxColumn.HeaderText = "P Conf.";
-            this.precioConfidencial2DataGridViewTextBoxColumn.MinimumWidth = 90;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.precioConfidencial2DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.precioConfidencial2DataGridViewTextBoxColumn.HeaderText = "Conf";
+            this.precioConfidencial2DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioConfidencial2DataGridViewTextBoxColumn.Name = "precioConfidencial2DataGridViewTextBoxColumn";
             this.precioConfidencial2DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioConfidencial2DataGridViewTextBoxColumn.Width = 90;
             // 
             // precioBooking2DataGridViewTextBoxColumn
             // 
             this.precioBooking2DataGridViewTextBoxColumn.DataPropertyName = "precioBooking2";
-            this.precioBooking2DataGridViewTextBoxColumn.HeaderText = "P Booking";
-            this.precioBooking2DataGridViewTextBoxColumn.MinimumWidth = 90;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            this.precioBooking2DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.precioBooking2DataGridViewTextBoxColumn.HeaderText = "Book";
+            this.precioBooking2DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioBooking2DataGridViewTextBoxColumn.Name = "precioBooking2DataGridViewTextBoxColumn";
             this.precioBooking2DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioBooking2DataGridViewTextBoxColumn.Width = 90;
             // 
             // precioPublic2DataGridViewTextBoxColumn
             // 
             this.precioPublic2DataGridViewTextBoxColumn.DataPropertyName = "precioPublic2";
-            this.precioPublic2DataGridViewTextBoxColumn.HeaderText = "P Public";
-            this.precioPublic2DataGridViewTextBoxColumn.MinimumWidth = 92;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            this.precioPublic2DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.precioPublic2DataGridViewTextBoxColumn.HeaderText = "Pub";
+            this.precioPublic2DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioPublic2DataGridViewTextBoxColumn.Name = "precioPublic2DataGridViewTextBoxColumn";
             this.precioPublic2DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioPublic2DataGridViewTextBoxColumn.Width = 92;
             // 
             // idServices3DataGridViewTextBoxColumn
             // 
@@ -596,7 +683,6 @@
             this.idServices3DataGridViewTextBoxColumn.Name = "idServices3DataGridViewTextBoxColumn";
             this.idServices3DataGridViewTextBoxColumn.ReadOnly = true;
             this.idServices3DataGridViewTextBoxColumn.Visible = false;
-            this.idServices3DataGridViewTextBoxColumn.Width = 24;
             // 
             // nameService3DataGridViewTextBoxColumn
             // 
@@ -605,34 +691,37 @@
             this.nameService3DataGridViewTextBoxColumn.MinimumWidth = 110;
             this.nameService3DataGridViewTextBoxColumn.Name = "nameService3DataGridViewTextBoxColumn";
             this.nameService3DataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameService3DataGridViewTextBoxColumn.Width = 110;
+            this.nameService3DataGridViewTextBoxColumn.Visible = false;
             // 
             // precioConfidencial3DataGridViewTextBoxColumn
             // 
             this.precioConfidencial3DataGridViewTextBoxColumn.DataPropertyName = "precioConfidencial3";
-            this.precioConfidencial3DataGridViewTextBoxColumn.HeaderText = "P Conf.";
-            this.precioConfidencial3DataGridViewTextBoxColumn.MinimumWidth = 90;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Firebrick;
+            this.precioConfidencial3DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            this.precioConfidencial3DataGridViewTextBoxColumn.HeaderText = "Conf";
+            this.precioConfidencial3DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioConfidencial3DataGridViewTextBoxColumn.Name = "precioConfidencial3DataGridViewTextBoxColumn";
             this.precioConfidencial3DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioConfidencial3DataGridViewTextBoxColumn.Width = 90;
             // 
             // precioBooking3DataGridViewTextBoxColumn
             // 
             this.precioBooking3DataGridViewTextBoxColumn.DataPropertyName = "precioBooking3";
-            this.precioBooking3DataGridViewTextBoxColumn.HeaderText = "P Booking";
-            this.precioBooking3DataGridViewTextBoxColumn.MinimumWidth = 90;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Firebrick;
+            this.precioBooking3DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
+            this.precioBooking3DataGridViewTextBoxColumn.HeaderText = "Book";
+            this.precioBooking3DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioBooking3DataGridViewTextBoxColumn.Name = "precioBooking3DataGridViewTextBoxColumn";
             this.precioBooking3DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioBooking3DataGridViewTextBoxColumn.Width = 90;
             // 
             // precioPublic3DataGridViewTextBoxColumn
             // 
             this.precioPublic3DataGridViewTextBoxColumn.DataPropertyName = "precioPublic3";
-            this.precioPublic3DataGridViewTextBoxColumn.HeaderText = "P Public";
-            this.precioPublic3DataGridViewTextBoxColumn.MinimumWidth = 90;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Firebrick;
+            this.precioPublic3DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            this.precioPublic3DataGridViewTextBoxColumn.HeaderText = "Pub";
+            this.precioPublic3DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioPublic3DataGridViewTextBoxColumn.Name = "precioPublic3DataGridViewTextBoxColumn";
             this.precioPublic3DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioPublic3DataGridViewTextBoxColumn.Width = 90;
             // 
             // idServices4DataGridViewTextBoxColumn
             // 
@@ -642,7 +731,6 @@
             this.idServices4DataGridViewTextBoxColumn.Name = "idServices4DataGridViewTextBoxColumn";
             this.idServices4DataGridViewTextBoxColumn.ReadOnly = true;
             this.idServices4DataGridViewTextBoxColumn.Visible = false;
-            this.idServices4DataGridViewTextBoxColumn.Width = 24;
             // 
             // nameService4DataGridViewTextBoxColumn
             // 
@@ -651,34 +739,39 @@
             this.nameService4DataGridViewTextBoxColumn.MinimumWidth = 110;
             this.nameService4DataGridViewTextBoxColumn.Name = "nameService4DataGridViewTextBoxColumn";
             this.nameService4DataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameService4DataGridViewTextBoxColumn.Width = 110;
+            this.nameService4DataGridViewTextBoxColumn.Visible = false;
             // 
             // precioConfidencial4DataGridViewTextBoxColumn
             // 
             this.precioConfidencial4DataGridViewTextBoxColumn.DataPropertyName = "precioConfidencial4";
-            this.precioConfidencial4DataGridViewTextBoxColumn.HeaderText = "P Conf.";
-            this.precioConfidencial4DataGridViewTextBoxColumn.MinimumWidth = 90;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.precioConfidencial4DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
+            this.precioConfidencial4DataGridViewTextBoxColumn.HeaderText = "Conf";
+            this.precioConfidencial4DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioConfidencial4DataGridViewTextBoxColumn.Name = "precioConfidencial4DataGridViewTextBoxColumn";
             this.precioConfidencial4DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioConfidencial4DataGridViewTextBoxColumn.Width = 90;
             // 
             // precioBooking4DataGridViewTextBoxColumn
             // 
             this.precioBooking4DataGridViewTextBoxColumn.DataPropertyName = "precioBooking4";
-            this.precioBooking4DataGridViewTextBoxColumn.HeaderText = "P Booking";
-            this.precioBooking4DataGridViewTextBoxColumn.MinimumWidth = 90;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            this.precioBooking4DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            this.precioBooking4DataGridViewTextBoxColumn.HeaderText = "Book";
+            this.precioBooking4DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioBooking4DataGridViewTextBoxColumn.Name = "precioBooking4DataGridViewTextBoxColumn";
             this.precioBooking4DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioBooking4DataGridViewTextBoxColumn.Width = 90;
             // 
             // precioPublic4DataGridViewTextBoxColumn
             // 
             this.precioPublic4DataGridViewTextBoxColumn.DataPropertyName = "precioPublic4";
-            this.precioPublic4DataGridViewTextBoxColumn.HeaderText = "P Public";
-            this.precioPublic4DataGridViewTextBoxColumn.MinimumWidth = 90;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            this.precioPublic4DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle15;
+            this.precioPublic4DataGridViewTextBoxColumn.HeaderText = "Pub";
+            this.precioPublic4DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioPublic4DataGridViewTextBoxColumn.Name = "precioPublic4DataGridViewTextBoxColumn";
             this.precioPublic4DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioPublic4DataGridViewTextBoxColumn.Width = 90;
             // 
             // idServices5DataGridViewTextBoxColumn
             // 
@@ -688,7 +781,6 @@
             this.idServices5DataGridViewTextBoxColumn.Name = "idServices5DataGridViewTextBoxColumn";
             this.idServices5DataGridViewTextBoxColumn.ReadOnly = true;
             this.idServices5DataGridViewTextBoxColumn.Visible = false;
-            this.idServices5DataGridViewTextBoxColumn.Width = 24;
             // 
             // nameService5DataGridViewTextBoxColumn
             // 
@@ -697,34 +789,37 @@
             this.nameService5DataGridViewTextBoxColumn.MinimumWidth = 110;
             this.nameService5DataGridViewTextBoxColumn.Name = "nameService5DataGridViewTextBoxColumn";
             this.nameService5DataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameService5DataGridViewTextBoxColumn.Width = 110;
+            this.nameService5DataGridViewTextBoxColumn.Visible = false;
             // 
             // precioConfidencial5DataGridViewTextBoxColumn
             // 
             this.precioConfidencial5DataGridViewTextBoxColumn.DataPropertyName = "precioConfidencial5";
-            this.precioConfidencial5DataGridViewTextBoxColumn.HeaderText = "P Conf.";
-            this.precioConfidencial5DataGridViewTextBoxColumn.MinimumWidth = 90;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Firebrick;
+            this.precioConfidencial5DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle16;
+            this.precioConfidencial5DataGridViewTextBoxColumn.HeaderText = "Conf";
+            this.precioConfidencial5DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioConfidencial5DataGridViewTextBoxColumn.Name = "precioConfidencial5DataGridViewTextBoxColumn";
             this.precioConfidencial5DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioConfidencial5DataGridViewTextBoxColumn.Width = 90;
             // 
             // precioBooking5DataGridViewTextBoxColumn
             // 
             this.precioBooking5DataGridViewTextBoxColumn.DataPropertyName = "precioBooking5";
-            this.precioBooking5DataGridViewTextBoxColumn.HeaderText = "P Booking";
-            this.precioBooking5DataGridViewTextBoxColumn.MinimumWidth = 90;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.Firebrick;
+            this.precioBooking5DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle17;
+            this.precioBooking5DataGridViewTextBoxColumn.HeaderText = "Book";
+            this.precioBooking5DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioBooking5DataGridViewTextBoxColumn.Name = "precioBooking5DataGridViewTextBoxColumn";
             this.precioBooking5DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioBooking5DataGridViewTextBoxColumn.Width = 90;
             // 
             // precioPublic5DataGridViewTextBoxColumn
             // 
             this.precioPublic5DataGridViewTextBoxColumn.DataPropertyName = "precioPublic5";
-            this.precioPublic5DataGridViewTextBoxColumn.HeaderText = "P Public";
-            this.precioPublic5DataGridViewTextBoxColumn.MinimumWidth = 90;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Firebrick;
+            this.precioPublic5DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle18;
+            this.precioPublic5DataGridViewTextBoxColumn.HeaderText = "Pub";
+            this.precioPublic5DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioPublic5DataGridViewTextBoxColumn.Name = "precioPublic5DataGridViewTextBoxColumn";
             this.precioPublic5DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioPublic5DataGridViewTextBoxColumn.Width = 90;
             // 
             // idServices6DataGridViewTextBoxColumn
             // 
@@ -734,43 +829,39 @@
             this.idServices6DataGridViewTextBoxColumn.Name = "idServices6DataGridViewTextBoxColumn";
             this.idServices6DataGridViewTextBoxColumn.ReadOnly = true;
             this.idServices6DataGridViewTextBoxColumn.Visible = false;
-            this.idServices6DataGridViewTextBoxColumn.Width = 24;
             // 
             // nameService6DataGridViewTextBoxColumn
             // 
             this.nameService6DataGridViewTextBoxColumn.DataPropertyName = "nameService6";
             this.nameService6DataGridViewTextBoxColumn.HeaderText = "H Matrimonial";
-            this.nameService6DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameService6DataGridViewTextBoxColumn.MinimumWidth = 110;
             this.nameService6DataGridViewTextBoxColumn.Name = "nameService6DataGridViewTextBoxColumn";
             this.nameService6DataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameService6DataGridViewTextBoxColumn.Width = 45;
+            this.nameService6DataGridViewTextBoxColumn.Visible = false;
             // 
             // precioConfidencial6DataGridViewTextBoxColumn
             // 
             this.precioConfidencial6DataGridViewTextBoxColumn.DataPropertyName = "precioConfidencial6";
-            this.precioConfidencial6DataGridViewTextBoxColumn.HeaderText = "P Conf.";
-            this.precioConfidencial6DataGridViewTextBoxColumn.MinimumWidth = 90;
+            this.precioConfidencial6DataGridViewTextBoxColumn.HeaderText = "Conf";
+            this.precioConfidencial6DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioConfidencial6DataGridViewTextBoxColumn.Name = "precioConfidencial6DataGridViewTextBoxColumn";
             this.precioConfidencial6DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioConfidencial6DataGridViewTextBoxColumn.Width = 90;
             // 
             // precioBooking6DataGridViewTextBoxColumn
             // 
             this.precioBooking6DataGridViewTextBoxColumn.DataPropertyName = "precioBooking6";
-            this.precioBooking6DataGridViewTextBoxColumn.HeaderText = "P Booking";
-            this.precioBooking6DataGridViewTextBoxColumn.MinimumWidth = 90;
+            this.precioBooking6DataGridViewTextBoxColumn.HeaderText = "Book";
+            this.precioBooking6DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioBooking6DataGridViewTextBoxColumn.Name = "precioBooking6DataGridViewTextBoxColumn";
             this.precioBooking6DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioBooking6DataGridViewTextBoxColumn.Width = 90;
             // 
             // precioPublic6DataGridViewTextBoxColumn
             // 
             this.precioPublic6DataGridViewTextBoxColumn.DataPropertyName = "precioPublic6";
-            this.precioPublic6DataGridViewTextBoxColumn.HeaderText = "P Public";
-            this.precioPublic6DataGridViewTextBoxColumn.MinimumWidth = 90;
+            this.precioPublic6DataGridViewTextBoxColumn.HeaderText = "Pub";
+            this.precioPublic6DataGridViewTextBoxColumn.MinimumWidth = 45;
             this.precioPublic6DataGridViewTextBoxColumn.Name = "precioPublic6DataGridViewTextBoxColumn";
             this.precioPublic6DataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioPublic6DataGridViewTextBoxColumn.Width = 90;
             // 
             // idServices7DataGridViewTextBoxColumn
             // 
@@ -780,7 +871,6 @@
             this.idServices7DataGridViewTextBoxColumn.Name = "idServices7DataGridViewTextBoxColumn";
             this.idServices7DataGridViewTextBoxColumn.ReadOnly = true;
             this.idServices7DataGridViewTextBoxColumn.Visible = false;
-            this.idServices7DataGridViewTextBoxColumn.Width = 25;
             // 
             // nameService7DataGridViewTextBoxColumn
             // 
@@ -790,7 +880,6 @@
             this.nameService7DataGridViewTextBoxColumn.Name = "nameService7DataGridViewTextBoxColumn";
             this.nameService7DataGridViewTextBoxColumn.ReadOnly = true;
             this.nameService7DataGridViewTextBoxColumn.Visible = false;
-            this.nameService7DataGridViewTextBoxColumn.Width = 32;
             // 
             // precioConfidencial7DataGridViewTextBoxColumn
             // 
@@ -800,7 +889,6 @@
             this.precioConfidencial7DataGridViewTextBoxColumn.Name = "precioConfidencial7DataGridViewTextBoxColumn";
             this.precioConfidencial7DataGridViewTextBoxColumn.ReadOnly = true;
             this.precioConfidencial7DataGridViewTextBoxColumn.Visible = false;
-            this.precioConfidencial7DataGridViewTextBoxColumn.Width = 33;
             // 
             // precioBooking7DataGridViewTextBoxColumn
             // 
@@ -810,7 +898,6 @@
             this.precioBooking7DataGridViewTextBoxColumn.Name = "precioBooking7DataGridViewTextBoxColumn";
             this.precioBooking7DataGridViewTextBoxColumn.ReadOnly = true;
             this.precioBooking7DataGridViewTextBoxColumn.Visible = false;
-            this.precioBooking7DataGridViewTextBoxColumn.Width = 32;
             // 
             // precioPublic7DataGridViewTextBoxColumn
             // 
@@ -820,7 +907,6 @@
             this.precioPublic7DataGridViewTextBoxColumn.Name = "precioPublic7DataGridViewTextBoxColumn";
             this.precioPublic7DataGridViewTextBoxColumn.ReadOnly = true;
             this.precioPublic7DataGridViewTextBoxColumn.Visible = false;
-            this.precioPublic7DataGridViewTextBoxColumn.Width = 32;
             // 
             // idServices8DataGridViewTextBoxColumn
             // 
@@ -830,17 +916,15 @@
             this.idServices8DataGridViewTextBoxColumn.Name = "idServices8DataGridViewTextBoxColumn";
             this.idServices8DataGridViewTextBoxColumn.ReadOnly = true;
             this.idServices8DataGridViewTextBoxColumn.Visible = false;
-            this.idServices8DataGridViewTextBoxColumn.Width = 24;
             // 
             // nameService8DataGridViewTextBoxColumn
             // 
             this.nameService8DataGridViewTextBoxColumn.DataPropertyName = "nameService8";
             this.nameService8DataGridViewTextBoxColumn.HeaderText = "nameService8";
-            this.nameService8DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameService8DataGridViewTextBoxColumn.MinimumWidth = 110;
             this.nameService8DataGridViewTextBoxColumn.Name = "nameService8DataGridViewTextBoxColumn";
             this.nameService8DataGridViewTextBoxColumn.ReadOnly = true;
             this.nameService8DataGridViewTextBoxColumn.Visible = false;
-            this.nameService8DataGridViewTextBoxColumn.Width = 32;
             // 
             // precioConfidencial8DataGridViewTextBoxColumn
             // 
@@ -850,7 +934,6 @@
             this.precioConfidencial8DataGridViewTextBoxColumn.Name = "precioConfidencial8DataGridViewTextBoxColumn";
             this.precioConfidencial8DataGridViewTextBoxColumn.ReadOnly = true;
             this.precioConfidencial8DataGridViewTextBoxColumn.Visible = false;
-            this.precioConfidencial8DataGridViewTextBoxColumn.Width = 32;
             // 
             // precioBooking8DataGridViewTextBoxColumn
             // 
@@ -860,7 +943,6 @@
             this.precioBooking8DataGridViewTextBoxColumn.Name = "precioBooking8DataGridViewTextBoxColumn";
             this.precioBooking8DataGridViewTextBoxColumn.ReadOnly = true;
             this.precioBooking8DataGridViewTextBoxColumn.Visible = false;
-            this.precioBooking8DataGridViewTextBoxColumn.Width = 32;
             // 
             // precioPublic8DataGridViewTextBoxColumn
             // 
@@ -870,7 +952,6 @@
             this.precioPublic8DataGridViewTextBoxColumn.Name = "precioPublic8DataGridViewTextBoxColumn";
             this.precioPublic8DataGridViewTextBoxColumn.ReadOnly = true;
             this.precioPublic8DataGridViewTextBoxColumn.Visible = false;
-            this.precioPublic8DataGridViewTextBoxColumn.Width = 32;
             // 
             // idServices9DataGridViewTextBoxColumn
             // 
@@ -880,7 +961,6 @@
             this.idServices9DataGridViewTextBoxColumn.Name = "idServices9DataGridViewTextBoxColumn";
             this.idServices9DataGridViewTextBoxColumn.ReadOnly = true;
             this.idServices9DataGridViewTextBoxColumn.Visible = false;
-            this.idServices9DataGridViewTextBoxColumn.Width = 24;
             // 
             // nameService9DataGridViewTextBoxColumn
             // 
@@ -890,7 +970,6 @@
             this.nameService9DataGridViewTextBoxColumn.Name = "nameService9DataGridViewTextBoxColumn";
             this.nameService9DataGridViewTextBoxColumn.ReadOnly = true;
             this.nameService9DataGridViewTextBoxColumn.Visible = false;
-            this.nameService9DataGridViewTextBoxColumn.Width = 32;
             // 
             // precioConfidencial9DataGridViewTextBoxColumn
             // 
@@ -900,7 +979,6 @@
             this.precioConfidencial9DataGridViewTextBoxColumn.Name = "precioConfidencial9DataGridViewTextBoxColumn";
             this.precioConfidencial9DataGridViewTextBoxColumn.ReadOnly = true;
             this.precioConfidencial9DataGridViewTextBoxColumn.Visible = false;
-            this.precioConfidencial9DataGridViewTextBoxColumn.Width = 32;
             // 
             // precioBooking9DataGridViewTextBoxColumn
             // 
@@ -910,7 +988,6 @@
             this.precioBooking9DataGridViewTextBoxColumn.Name = "precioBooking9DataGridViewTextBoxColumn";
             this.precioBooking9DataGridViewTextBoxColumn.ReadOnly = true;
             this.precioBooking9DataGridViewTextBoxColumn.Visible = false;
-            this.precioBooking9DataGridViewTextBoxColumn.Width = 32;
             // 
             // precioPublic9DataGridViewTextBoxColumn
             // 
@@ -920,7 +997,6 @@
             this.precioPublic9DataGridViewTextBoxColumn.Name = "precioPublic9DataGridViewTextBoxColumn";
             this.precioPublic9DataGridViewTextBoxColumn.ReadOnly = true;
             this.precioPublic9DataGridViewTextBoxColumn.Visible = false;
-            this.precioPublic9DataGridViewTextBoxColumn.Width = 32;
             // 
             // addressDataGridViewTextBoxColumn
             // 
@@ -930,7 +1006,6 @@
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             this.addressDataGridViewTextBoxColumn.ReadOnly = true;
             this.addressDataGridViewTextBoxColumn.Visible = false;
-            this.addressDataGridViewTextBoxColumn.Width = 24;
             // 
             // statusHotelDataGridViewTextBoxColumn
             // 
@@ -940,7 +1015,6 @@
             this.statusHotelDataGridViewTextBoxColumn.Name = "statusHotelDataGridViewTextBoxColumn";
             this.statusHotelDataGridViewTextBoxColumn.ReadOnly = true;
             this.statusHotelDataGridViewTextBoxColumn.Visible = false;
-            this.statusHotelDataGridViewTextBoxColumn.Width = 24;
             // 
             // descriptionHotelDataGridViewTextBoxColumn
             // 
@@ -950,7 +1024,6 @@
             this.descriptionHotelDataGridViewTextBoxColumn.Name = "descriptionHotelDataGridViewTextBoxColumn";
             this.descriptionHotelDataGridViewTextBoxColumn.ReadOnly = true;
             this.descriptionHotelDataGridViewTextBoxColumn.Visible = false;
-            this.descriptionHotelDataGridViewTextBoxColumn.Width = 24;
             // 
             // idCityDataGridViewTextBoxColumn
             // 
@@ -960,7 +1033,10 @@
             this.idCityDataGridViewTextBoxColumn.Name = "idCityDataGridViewTextBoxColumn";
             this.idCityDataGridViewTextBoxColumn.ReadOnly = true;
             this.idCityDataGridViewTextBoxColumn.Visible = false;
-            this.idCityDataGridViewTextBoxColumn.Width = 25;
+            // 
+            // HotelsBindingSource
+            // 
+            this.HotelsBindingSource.DataSource = typeof(PaySupplier.Models.HotelDGV);
             // 
             // ViewHotel
             // 
@@ -968,8 +1044,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1618, 785);
-            this.Controls.Add(this.btnSeeHotel);
-            this.Controls.Add(this.bntNewHotel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ViewHotel";
@@ -977,11 +1051,23 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HotelBindingNavigator)).EndInit();
-            this.HotelBindingNavigator.ResumeLayout(false);
-            this.HotelBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHotels)).EndInit();
+            this.pRedInitial.ResumeLayout(false);
+            this.pRedInitial.PerformLayout();
+            this.pHDoble.ResumeLayout(false);
+            this.pHDoble.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.pHTriple.ResumeLayout(false);
+            this.pHTriple.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HotelsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -996,18 +1082,6 @@
         private System.Windows.Forms.DataGridView dgvHotels;
         private System.Windows.Forms.Button bntNewHotel;
         private System.Windows.Forms.Button btnSeeHotel;
-        private System.Windows.Forms.BindingNavigator HotelBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.BindingSource HotelsBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceConfidencialservicio1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceConfidencialservicio2DataGridViewTextBoxColumn;
@@ -1025,9 +1099,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idServicie4DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn service4DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Panel pRedInitial;
+        private System.Windows.Forms.Panel pHDoble;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel pHTriple;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idHotelsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
-        private System.Windows.Forms.DataGridViewButtonColumn Reservar;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameCityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameHotelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryHotelDataGridViewTextBoxColumn;
@@ -1083,5 +1166,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusHotelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionHotelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn Edit;
+        private System.Windows.Forms.DataGridViewButtonColumn Reservar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
     }
 }

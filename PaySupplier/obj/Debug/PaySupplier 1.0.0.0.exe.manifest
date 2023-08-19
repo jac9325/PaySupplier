@@ -139,14 +139,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PaySupplier 1.0.0.0.exe" size="382944">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PaySupplier 1.0.0.0.exe" size="380896">
       <assemblyIdentity name="PaySupplier 1.0.0.0" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>EEFgjUttBEnuyOGlQnCKHkhLHQWrPV7wgFLW8kYC12g=</dsig:DigestValue>
+        <dsig:DigestValue>PIHpriUsGtdb0m6ezFxeeKYWEHS3kdmgfPD4zCmaggQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -267,13 +267,13 @@
       <dsig:DigestValue>zE3nHxcaode7ceRdj+wmAULrQltkEfPPN+jyKrU+foI=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="PaySupplier 1.0.0.0.exe.config" size="1227">
+  <file name="PaySupplier 1.0.0.0.exe.config" size="1278">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>KUTzuK9HqUu7iwNX9ebyFp6QSqZL/LzFm4Inukd+WfU=</dsig:DigestValue>
+      <dsig:DigestValue>FPwiZOv09v9x1E/gBfTKsFMYXEdTO8fQW2s36AFpNyc=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
